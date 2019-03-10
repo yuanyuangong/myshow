@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/admin.css">
+  <link rel="stylesheet" href="../css/assets/css/app.css">
+  <style type="text/css">
+   
+    input{
+      border: none;
+      background-color: #fff;
+    }
+    .am-topbar-brand{
+      padding:0;
+    }
+    .yue{
+      text-align: center;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+    }
+     .mingxi li{
+      background-color: #f8f8f8;
+     }
+    .mingxi li:first-child{
+      
+      border-top: none;
+      text-align: center;
+      padding-top: 0;
+    }
+
+  </style>
+</head>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+<body id="body" >
+<header class="am-topbar admin-header" id="header">
+<div class="am-g">
+  <div class="am-u-sm-3">
+     <div class="am-topbar-brand " onclick="history.go(-1)">
+       <strong class="am-icon-chevron-left"></strong>
+     </div>
+  </div>
+  <div class="am-u-sm-6">
+    <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+      我的资金
+    </div>
+  </div>
+  <div class="am-u-sm-3">
+    <div class="am-topbar-brand gyfloatright" >
+      <span ><small id="bianji">&nbsp</small></span>
+    </div>
+  </div>
+</div>
+ 
+</header>
+<!-- <header class="am-topbar admin-header" id="header">
+  <div class="am-topbar-brand " onclick="history.go(-1)">
+    <strong class="am-icon-chevron-left"></strong> <span>个人资料&nbsp</span>
+  </div>
+  
+</header> -->
+<section id="">
+  <ul class="am-list am-list-static gypadding">
+     <li>
+        <div class="am-g">
+        <div class="am-u-sm-4">
+          <button class="am-btn am-btn-block am-btn-secondary"><small>提现</small></button>
+
+        </div>
+        <div class="am-u-sm-4" style="padding:0">
+          <div class="yue"><small>余额(￥)</small><br><span style="color: red;font-size: 1.8rem;font-weight: bold;">32</span></div>
+        </div>
+        <div class="am-u-sm-4">
+          <button class="am-btn am-btn-block am-btn-warning"><small>充值</small></button>
+        </div>
+
+        </div>
+     </li>
+
+     <li>
+
+      <div class="am-g" >
+        <div class="am-u-sm-4" >蓝钻</div>
+        <div class="am-u-sm-8" style="text-align: center;">
+          <span style="color: #1184ee">2000(个)</span>
+        </div>
+      </div>
+     </li>
+  </ul> 
+
+  <ul class="am-list am-list-static gypadding">
+     <li>
+
+      <div class="am-g" onclick="window.location.href='./fapiao.html'">
+        <div class="am-u-sm-4" >发票</div>
+        <div class="am-u-sm-8" style="text-align: right;color: #999">
+          &nbsp<span class="am-icon-angle-right am-icon-sm"></span>
+        </div>
+      </div>
+     </li>      
+    </ul> 
+    <ul class="am-list am-list-static mingxi" style="padding:0 8px">
+     <li>
+        <small class="am-icon-list-alt ">&nbsp收支明细</small>
+     </li>
+     <li>
+        <div class="am-g">
+          <div class="am-u-sm-8">
+            充值<br><small>2015-07-05&nbsp08:46:34</small>
+          </div>
+          <div class="am-u-sm-4" style="text-align: right;color: #fea53c;font-size: 1.8rem">
+            +0.70    
+          </div>
+        </div>
+     </li> 
+     <li>
+        <div class="am-g">
+          <div class="am-u-sm-8">
+            注册奖励<br><small>2014-07-05&nbsp08:46:34</small>
+          </div>
+          <div class="am-u-sm-4" style="text-align: right;color: #1184ee;font-size: 1.8rem">
+            +0.70    
+          </div>
+        </div>
+     </li>     
+     <li>
+        <div class="am-g">
+          <div class="am-u-sm-8">
+            好友推送返利<br><small>2015-07-05&nbsp08:46:34</small>
+          </div>
+          <div class="am-u-sm-4" style="text-align: right;color: #fea53c;font-size: 1.8rem">
+            +50   
+          </div>
+        </div>
+     </li>          
+    </ul>   
+</section>
+
+<script src="../css/assets/js/jquery.min.js"></script>
+<script src="../script/api.js"></script>
+<!--<![endif]-->
+
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

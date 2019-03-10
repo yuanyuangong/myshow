@@ -1,0 +1,1 @@
+function getTotalPages(a,r){var e=1>r?1:Math.ceil(a/r);return Math.max(e||0,1)}function cleanArray(a){for(var r=new Array,e=0;e<a.length;e++)a[e]&&r.push(a[e]);return r}_.mixin({getTotalPages:getTotalPages,cleanArray:cleanArray});

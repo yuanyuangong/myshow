@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <style type="text/css">
+      #footer{
+      position: fixed;
+      bottom: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 36px;
+      border-top: 1px solid #ccc;
+      background: #fff;
+    }
+    .gy-padding{
+      padding: 0.5rem 1rem;
+      line-height: 36px;
+    }
+   .am-g{
+      text-align: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+    #main{
+    height: 700px;
+    width: 100%;
+    }
+    #body{
+      overflow: auto;
+    }
+    #header{
+      position:fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background-color: #fff;
+      color: #333;
+    }
+    #section{
+      background-color:#f8f8f8; 
+      padding: 8px 16px;
+      margin-top: 50px;
+    }
+    #section li{
+      padding: 0.5rem 1rem;
+    }
+   .gygreen{
+    color: #72d350;
+   }
+   .gyred{
+    color: #fc4747;
+   }
+    .gy-fangkuai{
+   
+      background-color: #fea53c;
+      color: #fff;
+    }
+    .gyborder{
+      border: 1px solid #ccc !important;
+    }
+    .gyactive{
+      background-color: #fea53c;
+      color: #fff;
+    }
+    #doc-ta-1{
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+    .gyallheight{
+      line-height: 36px;
+    }
+    .gyborederright{
+      border-right: 1px solid #ccc !important;
+    }
+    .gyfloatright{
+      float: right;
+    }
+    .gyfontnormal{
+      font-size: 1.4rem;
+        color: #010101;
+    }
+    #footer .am-g{
+      padding: 0;
+    }
+    .gyorge{
+      color: #fea53c;
+    }
+ 
+     #footer .am-u-sm-6:hover {
+
+      background-color: #fea53c;
+      color: #fff;
+     }
+  </style>
+</head>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+<body id="body" >
+  <header class="am-topbar admin-header" id="header">
+   <div class="am-topbar-brand " onclick="history.go(-1)">
+      <strong class="am-icon-chevron-left"></strong> <span>我的订单</span>
+    </div>
+  </header>
+  <section id="section">
+     <ul class="am-list am-list-static am-list-border" >
+      <li><strong>G3213131</strong> &nbsp<span class="am-icon-upload"></span>+<span class="am-icon-truck"></span>
+      <span class="gyfloatright " ><small>关闭</small></span>
+      </li>
+      <li onclick="window.location.href='./xiangqing_che_xiang.html'">
+        <span class="am-icon-list-alt gyorge"></span>&nbsp<span class="gyfontnormal ">车牌号：沪C12345  / 集装箱型： 20尺</span>
+        <hr style="margin: 4px 0">
+        <span class="gyfontnormal"><span class="gygreen">从&nbsp</span>上海嘉定<span class="gyred">&nbsp到&nbsp</span>某港区</span>
+      </li>
+      <li>
+        <small>2016-3-24/12:24</small> 
+        <span class="gyfloatright gyorge"><span class="am-icon-eye"></span><small style="color: #010101">&nbsp240</small></span>
+      </li>
+    </ul>
+    
+
+
+  </section>
+  
+  <footer id="footer">
+   <div class="am-g gyallheight">
+    <div class="am-u-sm-6 gyborederright gyactive">我的发布</div>
+    <div class="am-u-sm-6" onclick="window.location.href='./wodedingdan_1.html'">我的浏览</div>
+  
+   </div>
+  </footer>
+<!-- content start -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../script/doT.min.js"></script>
+<script src="../script/SHA1.js"></script>
+<script src="../script/APICloud-rest.js"></script>
+<script src="../script/api.js"></script>
+<!--<![endif]-->
+<script src="../assets/js/amazeui.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script>
+  function Xgetdanzi(){
+
+  }
+</script>
+</body>
+</html>

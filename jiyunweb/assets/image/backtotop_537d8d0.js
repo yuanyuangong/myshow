@@ -1,0 +1,1 @@
+define("widget/backtotop/backtotop",["require","exports","module"],function(){$(document).ready(function(){$(window).height()+100<$(document).height()&&$("#top-affix").removeClass("hidden").affix({offset:{top:100}})})});

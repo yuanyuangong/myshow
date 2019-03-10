@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>lunbo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+
+    <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="../css/assets/css/admin.css">
+    <link rel="stylesheet" href="../css/assets/css/app.css">
+    <!-- Demo styles -->
+    <style type="text/css">
+    .am-topbar-brand{
+      padding:0;
+    }
+  
+    </style>
+</head>
+<body>
+<div id="main">
+          <ul class="am-list am-list-static am-list-border" style="margin-bottom: 12px">
+          <li >当前区域：有<strong>200</strong>单需求供您选择</li>
+          </ul>
+ <!--   <script id="template" type="text/template">
+
+     {{~ it:data }} -->
+          <ul class="am-list am-list-static am-list-border">
+            <li style="padding-bottom: 4px" onclick="window.parent.location.href='./xiangqingbaojia.html'">
+              <div class="am-g" style="padding: 0">
+                <div class="am-u-sm-10" style="padding-left: 0;">
+                   <i class="am-icon-stack-exchange" style="color: #fea53c"></i>
+                   <strong>集装箱: 20'GP*4</strong> 
+                   <br>
+                   <small>
+                     <i class="am-icon-clock-o am-icon-fw"></i>
+                      预约时间：2016-04-18 / 12：34
+                   </small> 
+                </div>
+                <div class="am-u-sm-2" style="text-align: right;white-space: nowrap;padding: 0">
+                  <span class="am-badge am-badge-primary">出口</span>
+             <!--      <span class="am-badge am-badge-secondary">进口</span>
+                  <span class="am-badge am-badge-success">散货</span>
+                  <span class="am-badge am-badge-warning">外发</span>
+                  <span class="am-badge am-badge-danger">拼箱</span> -->
+              
+
+
+                </div>
+           
+              </div>
+            </li>
+            <li style="padding-top: 4px;padding-bottom: 4px">
+              <span class="gygreen">从&nbsp</span>上海港<span style="color: #fe2222">&nbsp到</span>&nbsp厦门港
+            </li>
+           
+            <li>
+              <div class="am-g" >
+                <div class="am-u-sm-6">
+                  <button type="button" class="am-btn am-btn-warning am-btn-block" style="font-size: 12px" id="doc-prompt-toggle">报价</button>
+                </div>
+                
+                  <!-- 报价输入框 -->
+                    <div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt">
+                      <div class="am-modal-dialog">
+                        <div class="am-modal-hd">请输入您的报价金额
+
+                         <input type="text" class="am-modal-prompt-input" style="margin: 0;width: 100%">
+        
+                        </div>
+                        <div class="am-modal-bd" style="text-align: left;">
+                         
+                         
+                        </div>
+                        <div class="am-modal-footer">
+                          <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+                          <span class="am-modal-btn" data-am-modal-confirm>报价</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                <div class="am-u-sm-6">
+                  <button type="button" class="am-btn am-btn-secondary am-btn-block" style="font-size: 12px" onclick="alert('拨打司机电话')" >联系他</button>
+
+                </div>
+              </div>  
+            </li>
+          </ul>
+          
+    <script src="../script/doT.min.js"></script>
+    <script src="../script/SHA1.js"></script>
+    <script src="../css/assets/js/jquery.min.js"></script>
+
+    <script src="../css/assets/js/amazeui.min.js"></script>
+
+    <script type="text/javascript">
+
+
+    // 弹出报价窗口
+
+    $(function() {
+      $('#doc-prompt-toggle').on('click', function() {
+        $('#my-prompt').modal({
+          relatedTarget: this,
+          onConfirm: function(e) {
+            alert('报价成功' + e.data || '')
+          },
+          onCancel: function(e) {
+            
+          }
+        });
+      });
+
+       $('#doc-prompt-toggle-1').on('click', function() {
+        $('#my-prompt-1').modal({
+          relatedTarget: this,
+          onConfirm: function(e) {
+            alert('报价成功' + e.data || '')
+          },
+          onCancel: function(e) {
+            
+          }
+        });
+      });
+    });
+
+</script>
+</body>
+</html>

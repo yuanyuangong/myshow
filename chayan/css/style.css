@@ -1,0 +1,109 @@
+/* CSS Initializing */
+@charset "utf-8";
+.header_top{height:26px;line-height:26px;}
+.header_center{background:#013660;color:#fff;}
+.header_center .logo{}
+.header_center .logo span{display:inline-block;height:60px;line-height:60px;border-left:1px solid #fff;}
+.header .wrap{width:1200px;margin:0 auto;}
+.index_banner{height:142px;}
+.index_menu li{width:239px;height:189px;border:1px solid #ccc;background:#fff url(../images/li01.png) no-repeat 211px 164px;position:relative;overflow:hidden;margin:-1px 0 0 -1px;float:left;}
+.index_menu li .icon{display:inline-block;width:72px;height:72px;background:url(../images/icons.png) no-repeat;}
+.index_menu li.list2 .icon{background-position:-239px 0;}
+.index_menu li.list3 .icon{background-position:-482px 0;}
+.index_menu li.list4 .icon{background-position:-715px 0;}
+.index_menu li.list5 .icon{background-position:0px -193px;}
+.index_menu li.list6 .icon{background-position:-242px -193px;}
+.index_menu li.list7 .icon{background-position:-476px -193px;}
+.index_menu li.list8 .icon{background-position:-716px -193px;}
+.index_menu li .ico_box{width:239px;height:189px;}
+.index_menu li .txt_box{width:239px;height:189px;position:absolute;left:0;top:189px;background:#e8eae5 url(../images/li01.png) no-repeat 211px 164px;transition: all 0.2s linear 0s;opacity:0; z-index:3;}
+.index_menu li:hover .txt_box{top:0px;opacity:1; }
+.index_menu li .txt_box .btn{display:inline-block;width:95px;height:29px;background:#fff;border-radius:5px;text-align:center;line-height:29px;color:#60bcde;}
+.wrap{width:960px;margin:0 auto;}
+.footer{background:#013660;color:#fff;min-height:100px;}
+.footer a{color:#fff;}
+/*login*/
+.login_box{padding:20px 70px;}
+.login_box .inputmk{background:#f8f8f8;border:1px solid #ccc;height:36px;line-height:36px;}
+.login_box .inputmk label{display:inline-block;text-align:right;font-size:16px;width:52px;text-align:right;color:#333;}
+.login_box .inputmk .inputtip{border:none;background:none;padding:0 5px;}
+.blue_btn{width:100%;height:36px;background:#013660;border:none;cursor:pointer;color:#fff;font-size:16px;}
+.blue_btn2{width:100%;height:36px;background:#357bb3;border:none;cursor:pointer;color:#fff;font-size:16px;}
+.yzm_btn{height:36px;background:#013660;border:none;cursor:pointer;color:#fff;width:110px;}
+.login_box .regmk label{display:inline-block;text-align:right;font-size:14px;width:80px;text-align:right;color:#333;}
+.login_box .regtip{background:#f8f8f8;border:1px solid #ccc;height:36px;line-height:36px;width:216px;padding:0 5px;}
+
+.left_bar{width:256px;background:#fff;border:1px solid #ccc;}
+.right_mian{width:688px;}
+.enter_area{border:1px solid #ccc;padding:6px;background:#f8f8f8;}
+.enter_area textarea{width:100%;border:none;background:#f8f8f8;height:85px;font-size:12px;font-family:'微软雅黑';}
+.notice_text{border-top:1px dashed #ccc;border-bottom:1px dashed #ccc;}
+.inputtxt{background:#f8f8f8;border:1px solid #ccc;height:26px;line-height:26px;width:216px;padding:0 5px;}
+.inputtxt.riliico{background:#f8f8f8 url(../images/riliico.png) no-repeat right center;}
+.select_btn{height:26px;width:112px;border:1px solid #357bb3;color:#357bb3;display:inline-block;line-height:26px;text-align:center;cursor:pointer;}
+.select_btn.cur{background:#357bb3;color:#fff;}
+/*查验预约*/
+.table_header{}
+.table_header tr td{background:#357bb3;height:46px;color:#fff;text-align:center;border:1px solid #ccc;}
+.table_yuyue tr td{border-bottom:1px solid #ccc;text-align:center;padding:8px 0;}
+.m-height486{min-height:486px;}
+.pages_menu a{margin:0 6px;}
+/*流程跟踪*/
+.lc_tit{border:1px solid #357bb3;color:#357bb3;border-bottom:2px solid #357bb3;}
+.lc_list{background:url(../images/yuanico.png) no-repeat 30px bottom;padding-bottom:9px;margin-bottom:30px;}
+.lc_list li{background:url(../images/listbg.png) no-repeat left top;height:66px;margin-left:26px;margin-right:6px;text-align:center;line-height:30px;padding-top:6px;color:#333;}
+.pages_title{background:#357bb3;}
+.search_form{}
+.search_txt{width:190px;height:26px;border:1px solid #ccc;background:#f8f8f8;padding:0 6px;}
+.search_btn{width:26px;height:26px;background:url(../images/fdjico.png) no-repeat center center;border:none;cursor:pointer;}
+.search_btn.search_gray{background:url(../images/fdjicogray.png) no-repeat center center;border-right:1px solid #ccc;width:42px;}
+.lc_table {background:url(../images/lcbg.png) no-repeat 380px center;}
+.lc_table tr td{padding:2px 3px;}
+.bz_area{border-top:1px solid #ccc;}
+.bz_area textarea{padding:6px 14px;border:none;font-size:12px;font-family:'微软雅黑';height:106px;width:630px;}
+.yq_tit{border-bottom:1px dashed #ccc;}
+.yq_area{box-shadow:1px 1px 3px #ccc;}
+.yq_area textarea{padding:6px 14px;border:none;font-size:12px;font-family:'微软雅黑';height:106px;width:630px;background:#f8f8f8;border:1px solid #ccc;}
+.blue_border_btn{border:1px solid #013660;cursor:pointer;background:#fff;width:138px;height:32px;}
+/*流程跟踪*/
+.flash{overflow:hidden;position:relative;background:#357bb3;}
+.fadearry{margin:8px;background:#357bb3;height:481px;overflow:hidden;width:943px;}
+.fadearry li{height:481px;position:relative;}
+.fadearry li img{width:943px;height:481px;}
+.fadearry li p{position:absolute;left:0;bottom:0;width:903px;}
+.fadearry li p a,.fadearry li p{color:#fff;}
+.index_img_scroll{width:960px;height:40px;margin:0px auto; position:relative;}
+.index_img_scroll .prev,.index_img_scroll .next { position:absolute; top:13px;cursor:pointer;width:15px;height:26px;cursor:pointer; z-index:9;}
+.index_img_scroll .prev{background:url(../images/leftbtn.png) no-repeat;left:8px}
+.index_img_scroll .next{background:url(../images/rightbtn.png) no-repeat; right:8px}
+.index_img_scroll .img_list { position:relative; width:880px; height:40px; overflow:hidden;margin-left:40px;}
+.index_img_scroll .img_list ul { width:9999px;}
+.index_img_scroll .img_list li { float:left;width:220px;height:46px;border-right:1px solid #357bb3;}
+.index_img_scroll .img_list li a{display:block;width:220px;height:46px;line-height:46px;background:#fff;text-align:center;font-family:'寰蒋闆呴粦';font-size:16px;color:#333;font-weight:bold;}
+.index_img_scroll .img_list li a:hover,.index_img_scroll .img_list li.current a{background:#357bb3;color:#fff;}
+/*预约历史*/
+.yy_tab a{display:inline-block;width:118px;height:26px;border:1px solid #357bb3;color:#357bb3;margin-left:-1px;line-height:26px;text-align:center;cursor:pointer;}
+.yy_tab a.cur,.yy_tab a:hover{color:#fff;background:#357bb3;}
+/*用户中心*/
+.member_box{width:478px;}
+.member_leftborder{border-right:1px solid #ccc;}
+.member_box .title{background:url(../images/line.png) repeat-x left center;}
+.member_box .title span{display:inline-block;padding:0 24px;background:#fff;}
+.member_box .cont{padding:10px 0 0 110px;font-size:14px;}
+.blueline,.yellowline,.greenline,.purpleline{width:8px;height:14px;display:inline-block; vertical-align:middle;margin-right:16px;}
+.yellowline{background:#357bb3;}
+.blueline{background:#f9c203;}
+.greenline{background:#27cf1a;}
+.purpleline{background:#b3354a;}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+
+   #footer{
+      position: fixed;
+      bottom: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 48px;
+      border-top: 1px solid #ccc;
+      background: #fff;
+    }
+    .gy-padding{
+      padding: 0.5rem 1rem;
+      line-height: 49px;
+    }
+   .am-g{
+      text-align: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+    #main{
+    height: 700px;
+    width: 100%;
+    }
+    #body{
+      overflow: hidden;
+    }
+    #header{
+      position:fixed;
+      top: 0;
+      width: 100%;
+    }
+    #section{
+      background-color:#f8f8f8; 
+      padding: 8px 16px;
+    }
+    #section li{
+      padding: 0.5rem 1rem;
+    }
+   .gygreen{
+    color: #72d350;
+   }
+   .gyred{
+    color: #fc4747;
+   }
+    .gy-fangkuai{
+   
+      background-color: #fea53c;
+      color: #fff;
+    }
+    .gyborder{
+      border: 1px solid #ccc !important;
+    }
+ 
+    #doc-ta-1{
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+    .gyallheight{
+      line-height: 48px;
+    }
+    .gyborederright{
+      border-right: 1px solid #ccc !important;
+    }
+    .gyfloatright{
+      float: right;
+    }
+    .gyfontnormal{
+      font-size: 1.4rem;
+      color: #333;
+    }
+    #footer .am-g{
+      padding: 0;
+    }
+    .gyorge{
+      color: #fea53c;
+    }
+    .highlight{
+    	background-color:#fea53c;
+    	color: #fff;
+    }

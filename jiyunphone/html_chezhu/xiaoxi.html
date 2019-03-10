@@ -1,0 +1,162 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/admin.css">
+  <link rel="stylesheet" href="../css/assets/css/app.css">
+
+  <style type="text/css">
+    #header{
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+   #list .am-g{
+      text-align: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+     #footer{
+      position: fixed;
+      bottom: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 36px;
+      border-top: 1px solid #ccc;
+      background: #fff;
+    }
+    #doc-ta-1{
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+    #footer .am-g{
+      padding: 0;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    #footer .am-u-sm-6{
+      line-height: 36px;
+    }
+    .am-topbar-brand{
+      padding:0;
+    }
+    .am-thumbnail{
+      margin: 0;
+    }
+    a{
+      padding: 0!important;
+    }
+  </style>
+</head>
+
+<body id="body" >
+  <header class="am-topbar admin-header" id="header">
+    <div class="am-g">
+      <div class="am-u-sm-4">
+         <div class="am-topbar-brand " onclick="history.go(-1)">
+           <strong class="am-icon-chevron-left"></strong>
+         </div>
+      </div>
+      <div class="am-u-sm-4">
+        <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+          消息
+        </div>
+      </div>
+      <div class="am-u-sm-4" style="text-align: right;">
+        <span class=""></span>
+      </div>
+    </div>
+  </header>
+  <div style="height:  50px"></div>
+  <div id="list" style="padding: 8px 8px" >
+
+ <!--    <script id="template" type="text/template">
+      {{~ it:data }} -->
+<!-- 等待需求方去人 -->
+    <ul class="am-list am-list-static am-list-border" style="border-radius: 3px">
+      <li>
+        <a href="./fanli.html">
+          <img src="../image/fangli.png" alt="" class="am-thumbnail" >
+        </a>
+      </li>
+    </ul>
+
+ <!--   {{~}}
+
+    </script> -->
+  </div>
+
+  
+
+<!-- content start -->
+<script src="../css/assets/js/jquery.min.js"></script>
+<script src="../script/doT.min.js"></script>
+<script src="../script/SHA1.js"></script>
+<!-- <script src="../script/gy.js"></script> -->
+<!-- <script src="../script/APICloud-rest.js"></script> -->
+
+<!--<![endif]-->
+<script>
+
+
+    // var list,lists,dot,dots,template,templates,pushstatus, isempty=false,limit=20,skips=0,cacheSize;
+    
+    // $(function(){
+    //   gyinit();
+    //   gyGetXdanzi('xuqiu');   
+    // });
+
+    //   function gyinit(){
+     
+    //   pushstatus=$api.byId('pushStatus');
+    //     list=$api.byId('list');
+    //   template=$api.byId('template');
+    //    lists=$api.byId('list');
+    //  templates=$api.byId('templates');
+    //  }
+    
+    // function gyGetXdanzi(table){
+    //     if ('gonggei'==table) {
+    //       dot= doT.template(templates.innerHTML);
+    //       $('.navs').removeClass('gyactive');
+    //      $('.navss').addClass('gyactive');
+    //     }else{
+    //       dot= doT.template(template.innerHTML);
+    //       $('.navss').removeClass('gyactive');
+    //      $('.navs').addClass('gyactive');
+    //     }
+    //      var now =Date.now();
+    //      var appKey = SHA1("A6902227200065"+"UZ"+"94BC5D5F-A237-4760-9350-865B677E12E5"+"UZ"+now)+"."+now;
+    //   $.ajax({
+    //     "url": "https://d.apicloud.com/mcm/api/"+table+"?filter=%7B%22where%22%3A%7B%7D%2C%22skip%22%3A0%2C%22limit%22%3A"+limit+"%7D",
+    //     "method": "GET",
+    //     "cache": false,
+    //     "headers": {
+    //       "X-APICloud-AppId": "A6902227200065",
+    //       "X-APICloud-AppKey":  appKey
+    //     }
+    //   }).success(function (data, status, header) {
+    //    if ('gonggei'==table){ 
+    //     $("#list").html("");
+    //     lists.innerHTML=dot(data);}
+    //    else{ $("#lists").html("");
+    //     list.innerHTML=dot(data);}
+    //   }).fail(function (header, status, errorThrown) {
+    //     alert("dsa")
+    //   })
+    // }
+</script>
+</body>
+</html>

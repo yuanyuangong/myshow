@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>集装箱调运</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <style>
+    .get {
+      background: #1E5B94;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .get-title {
+      font-size: 200%;
+      border: 2px solid #fff;
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .get-btn {
+      background: #fff;
+    }
+
+    .detail {
+      background: #fff;
+    }
+
+    .detail-h2 {
+      text-align: center;
+      font-size: 150%;
+      margin: 40px 0;
+    }
+
+    .detail-h3 {
+      color: #1f8dd6;
+    }
+
+    .detail-p {
+      color: #7f8c8d;
+    }
+
+    .detail-mb {
+      margin-bottom: 30px;
+    }
+
+    .hope {
+      background: #0bb59b;
+      padding: 50px 0;
+    }
+
+    .hope-img {
+      text-align: center;
+    }
+
+    .hope-hr {
+      border-color: #149C88;
+    }
+
+    .hope-title {
+      font-size: 140%;
+    }
+
+    .about {
+      background: #fff;
+      padding: 40px 0;
+      color: #7f8c8d;
+    }
+
+    .about-color {
+      color: #34495e;
+    }
+
+    .about-title {
+      font-size: 180%;
+      padding: 30px 0 50px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #7f8c8d;
+      margin: 0;
+      padding: 15px 0;
+      text-align: center;
+      background: #2d3e50;
+    }
+    .gy-background-color{
+      background-color: #fe8800;
+      color: #fff
+    } 
+    .gy-on:hover{
+      box-shadow: 4px 4px 4px #ccc;
+      background-color: #fff;
+    }
+    .gy-border{
+      border: none;
+    }
+    .gy-active>a{
+      color:#fe8800;
+    }
+    .gy-banner{
+     
+      background-size:100%;
+    }
+    .get-btn{background-color: #fe8800;color: #fff}
+    header > li {color-size:12px;}
+  </style>
+</head>
+<body>
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+  <div class="am-topbar-brand dingbu" style="cursor: pointer;" onclick="window.location.href='./index.html'">
+    <strong data-am-smooth-scroll > <img src="./image/jzx.png" alt="" height="20">&nbsp集装箱调运</strong> 
+  </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head" style="float: right;">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class=""><a href="./index.html">首页</a></li>
+        <li class="zhongbu navs am-active" data-am-dropdown><a href="./gonggao.html">集运宝盒™公告 </a></li>
+        <li class=" zhongbu navs"><a href="./about.html">关于罗济</a></li>
+        <!-- <li class="am-dropdown" data-am-dropdown>
+          <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+            关于罗济 <span class="am-icon-caret-down"></span>
+          </a>
+          <ul class="am-dropdown-content">
+           
+              <li class=" zhongbu navs"><a href="./about.html"class="dibu">关于我们</a></li>
+              <li class="  zhongbu navs"><a href="./lianxi.html">联系我们</a></li>
+          </ul>
+        </li> -->
+        <li class=" zhongbu navs"><a href="./zhuce.html"class="dibu">APP下载</a></li>
+        <li class=" zhongbu navs"><a href="./circle .html"class="dibu">跨境物流圈</a></li>
+
+      </ul>
+
+     
+    </div>
+  </div>
+</header>
+
+<div class="get gy-banner" style="padding: 0;border-bottom: 1px solid #ccc">
+  <img src="./image/index0011.png" alt="" width="100%">
+</div>
+
+<div class="detail">
+  <div class="am-g am-container" style="padding-bottom: 106px">
+    
+    <div class="am-tabs" data-am-tabs="{noSwipe: 1}" id="doc-tab-demo-1">
+      <ul class="am-tabs-nav am-nav am-nav-tabs" style="background-color: #f8f8f8;">
+        <li class="am-active"><a href="javascript: void(0)">关于邀请货主及货代战略合伙人的公告</a></li>
+        <li><a href="javascript: void(0)">关于邀请集装箱拖车运输战略合伙人的公告</a></li>
+      </ul>
+
+      <div class="am-tabs-bd">
+        <div class="am-tab-panel am-active">
+          <h3 style="width: 100%; text-align: center;">致中国进出口运输行业的货主/货代：</h3>
+
+            <p>作为国内最具互联网共享精神的集装箱智能调运平台（www.jiyunbaohe.com），集运宝盒™在逐步实现物流大数据与全国集装箱拖车数据融合应用的基础上，基于空间地理位置信息采集及行程时序复杂算法等手段，专注于为社会提供集装箱及拖车运输资源的对接匹配服务，目前业务范围已覆盖年均集装箱吞吐量超500万TEU的所有大型港口及相关辐射地区。2016年，集运宝盒™将进一步引领互联网+集装箱的运作理念，凝聚推动“集装箱EIP电子化”的共识，为“电子堆场”、“网上交割”等新型营运方式奠定基础，从而进一步降低货主/货代的物流成本，提升集装箱使用效率，减少集卡车空车行驶，降低二氧化碳排放。</p>
+            <p>畅想2016年，我们认为：推动集运事业创新发展是我们的使命和责任，也是我们实现中国梦的有效载体。在此，我们面向全国进出口贸易货主/货代公司，招募战略合伙人，携手为我们的集运事业赢取更大发展空间。</p>
+                <ul class="am-list am-list-static">
+        <li>（一）货代/货主战略合伙人邀请计划<br>
+            邀请对象：50家全国有较大拖车运输需求的货主/货代企业
+                招募港区分布计划：<br>
+                <table class="am-table am-table-bordered am-table-striped am-table-hover">
+                    <thead>
+                        <tr>
+                            <th>港区</th>
+                            <th>招募计划</th>
+                            <th>港区</th>
+                            <th>招募计划</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+          
+                        <tr class="am-active">
+                            <td>上海港</td>
+                            <td>4家</td>
+                            <td>深圳港</td>
+                            <td>4家</td>
+                           
+                        </tr>
+                        <tr >
+                            <td>舟山港</td>
+                            <td>2家</td>
+                            <td>广州港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>苏州港</td>
+                            <td>2家</td>
+                            <td>佛山港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>南京港</td>
+                            <td>2家</td>
+                            <td>中山港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>厦门港</td>
+                            <td>2家</td>
+                            <td>虎门港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>福州港</td>
+                            <td>2家</td>
+                            <td>天津港</td>
+                            <td>4家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>泉州港</td>
+                            <td>2家</td>
+                            <td>连云港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>大连港</td>
+                            <td>4家</td>
+                            <td>日照港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>丹东港</td>
+                            <td>2家</td>
+                            <td>烟台港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>营口港</td>
+                            <td>2家</td>
+                            <td>青岛港</td>
+                            <td>4家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>其他港口</td>
+                            <td>若干</td>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+   </li><li>（二）战略合伙人准入条件<br>
+            <ol>
+            <li>具备合法经营资质（《合法营业执照》《税务登记证》等）及独立法人资格；
+            </li><li>有较大量拖车运输业务需求，愿寻求更优质供应商的货主/货代；
+            </li><li>认同集运宝盒™运营理念和发展模式，有志向与我们共同合作、发展。</li>
+            </ol>
+   </li><li>（三）战略合伙人可享权益：
+            <ol>
+            <li>优先享有集运宝盒™拖车运输合作伙伴的协议价格；
+            </li><li>运用集运宝盒™强大的网络资源，无缝对接上下游行业，更好捕捉商机；
+            </li><li>高效成熟的TMS管理系统/CLOUD HUB对接/车辆定位跟踪系统；
+            </li><li>更安全的交易保障服务（担保交易、货物车辆保险等）；
+            </li><li>在集运宝盒™申请上市时，有资格申请成为创始人发起股东，共同分享发展成果。</li>
+            </ol>
+    </li><li>(四）事业合伙人需尽的责任与义务：
+            <ol>
+            <li>严格遵守国家法律、法规，规范经营，诚信经营，维护集运宝盒™形象；
+            </li><li>确保企业公示信息真实有效，包括营业资质、订单情况等；
+            </li><li>尽可能实现线下订单线上化、系统化、规划化，并定期更新与维护企业站内网站信息及运输需求，保持与平台的紧密联系。
+            </li><li>接受集运宝盒™统一进行的业务指导和培训，定期参加业务交流会议，促进合作发展；
+           </ol>
+      </li><li>（五）战略合伙人申请流程：
+            <ol>
+            <li>合作咨询<br>
+            <small>（1）总部合作咨询电话：<br>    
+            （2）总部合作项目负责人：<br>
+            （3）申请人也可选择面谈，了解集运宝盒™相关业务及经营情况，确认合作方式等</small>
+             </li><li>合作申请提交与签约<br>
+            <small>申请人线上提交《集运宝盒™合作申请表》（需上传《营业执照》《组织机构代码证》《税务登记证》），并注明箱东偏好。
+            总部战略事业部将由专人审核申请人综合实力，并给予电子回函。确认合作的，我们将邮寄《集运宝盒™战略合伙人合作协议（货主/货代版）》供双方签署。</small>
+             </li><li>战略合伙人身份标识
+            签订《集运宝盒™战略合伙人合作协议（货主/货代版）》后，申请人将在平台上拥有专属标识，并享受专属权益和回报。</li>
+            </ol>
+            </li>
+            </ul>
+            <span style="width: 100%;text-align: right;float: right;">集运宝盒™期待与您携手共进，共赢未来！<br> 2016年5月1日</span>
+        </div>
+        <!-- //拖车运输 -->
+        <div class="am-tab-panel">
+          <h3 style="width: 100%; text-align: center;">致各大口岸集装箱拖车运输企业：</h3>
+
+            <p>作为国内最具互联网共享精神的集装箱智能调运平台（www.jiyunbaohe.com），集运宝盒™在逐步实现物流大数据与全国集装箱拖车数据融合应用的基础上，基于空间地理位置信息采集及行程时序复杂算法等手段，专注于为社会提供集装箱及拖车运输资源的对接匹配服务，目前业务范围已覆盖年均集装箱吞吐量超500万TEU的所有大型港口及相关辐射地区。2016年，集运宝盒™将进一步引领互联网+集装箱的运作理念，凝聚推动“集装箱EIP电子化”的共识，为“电子堆场”、“网上交割”等新型营运方式奠定基础，从而进一步降低货主/货代的物流成本，提升集装箱使用效率，减少集卡车空车行驶，降低二氧化碳排放。</p>
+            <p>畅想2016年，我们认为：推动集运事业创新发展是我们的使命和责任，也是我们实现中国梦的有效载体。在此，我们面向全国进出口贸易货主/货代公司，招募战略合伙人，携手为我们的集运事业赢取更大发展空间。</p>
+                <ul class="am-list am-list-static">
+        <li>（一）货代/货主战略合伙人邀请计划<br>
+            邀请对象：50家全国有较大拖车运输需求的货主/货代企业
+                招募港区分布计划：<br>
+                <table class="am-table am-table-bordered am-table-striped am-table-hover">
+                    <thead>
+                        <tr>
+                            <th>港区</th>
+                            <th>招募计划</th>
+                            <th>港区</th>
+                            <th>招募计划</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+          
+                        <tr class="am-active">
+                            <td>上海港</td>
+                            <td>4家</td>
+                            <td>深圳港</td>
+                            <td>4家</td>
+                           
+                        </tr>
+                        <tr >
+                            <td>舟山港</td>
+                            <td>2家</td>
+                            <td>广州港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>苏州港</td>
+                            <td>2家</td>
+                            <td>佛山港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>南京港</td>
+                            <td>2家</td>
+                            <td>中山港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>厦门港</td>
+                            <td>2家</td>
+                            <td>虎门港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>福州港</td>
+                            <td>2家</td>
+                            <td>天津港</td>
+                            <td>4家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>泉州港</td>
+                            <td>2家</td>
+                            <td>连云港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>大连港</td>
+                            <td>4家</td>
+                            <td>日照港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>丹东港</td>
+                            <td>2家</td>
+                            <td>烟台港</td>
+                            <td>2家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>营口港</td>
+                            <td>2家</td>
+                            <td>青岛港</td>
+                            <td>4家</td>
+                            
+                        </tr>
+                        <tr >
+                            <td>其他港口</td>
+                            <td>若干</td>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+   </li><li>（二）战略合伙人准入条件<br>
+            <ol>
+            <li>具备合法经营资质（《合法营业执照》《税务登记证》等）及独立法人资格；
+            </li><li>有较大量拖车运输业务需求，愿寻求更优质供应商的货主/货代；
+            </li><li>认同集运宝盒™运营理念和发展模式，有志向与我们共同合作、发展。</li>
+            </ol>
+   </li><li>（三）战略合伙人可享权益：
+            <ol>
+            <li>优先享有集运宝盒™拖车运输合作伙伴的协议价格；
+            </li><li>运用集运宝盒™强大的网络资源，无缝对接上下游行业，更好捕捉商机；
+            </li><li>高效成熟的TMS管理系统/CLOUD HUB对接/车辆定位跟踪系统；
+            </li><li>更安全的交易保障服务（担保交易、货物车辆保险等）；
+            </li><li>在集运宝盒™申请上市时，有资格申请成为创始人发起股东，共同分享发展成果。</li>
+            </ol>
+    </li><li>(四）事业合伙人需尽的责任与义务：
+            <ol>
+            <li>严格遵守国家法律、法规，规范经营，诚信经营，维护集运宝盒™形象；
+            </li><li>确保企业公示信息真实有效，包括营业资质、订单情况等；
+            </li><li>尽可能实现线下订单线上化、系统化、规划化，并定期更新与维护企业站内网站信息及运输需求，保持与平台的紧密联系。
+            </li><li>接受集运宝盒™统一进行的业务指导和培训，定期参加业务交流会议，促进合作发展；
+           </ol>
+      </li><li>（五）战略合伙人申请流程：
+            <ol>
+            <li>合作咨询<br>
+            <small>（1）总部合作咨询电话：<br>    
+            （2）总部合作项目负责人：<br>
+            （3）申请人也可选择面谈，了解集运宝盒™相关业务及经营情况，确认合作方式等</small>
+             </li><li>合作申请提交与签约<br>
+            <small>申请人线上提交《集运宝盒™合作申请表》（需上传《营业执照》《组织机构代码证》《税务登记证》），并注明箱东偏好。
+            总部战略事业部将由专人审核申请人综合实力，并给予电子回函。确认合作的，我们将邮寄《集运宝盒™战略合伙人合作协议（货主/货代版）》供双方签署。</small>
+             </li><li>战略合伙人身份标识
+            签订《集运宝盒™战略合伙人合作协议（拖车运输企业版）》后，申请人将在平台上拥有专属标识，并享受专属权益和回报。</li>
+            </ol>
+            </li>
+            </ul>
+            <span style="width: 100%;text-align: right;float: right;">集运宝盒™期待与您携手共进，共赢未来！<br> 2016年5月1日</span>
+        </div>
+      
+      </div>
+    </div>
+ 
+  </div>  
+</div>
+
+<footer class="footer">
+       
+      <p>
+         
+              © 2016 <a href="#" target="_blank">33</a> Licensed under <a
+      href="#" target="_blank">23424</a>. by 上海罗济信息技术有限公司.
+        
+      </p>
+
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+</body>
+</html>

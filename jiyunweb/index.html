@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>集装箱调运</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <style>
+    .get {
+      background: #1E5B94;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .get-title {
+      font-size: 200%;
+      border: 2px solid #fff;
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .get-btn {
+      background: #fff;
+    }
+
+    .detail {
+      background: #fff;
+    }
+
+    .detail-h2 {
+      text-align: center;
+      font-size: 150%;
+      margin: 40px 0;
+    }
+
+    .detail-h3 {
+      color: #1f8dd6;
+    }
+
+    .detail-p {
+      color: #7f8c8d;
+    }
+
+    .detail-mb {
+      margin-bottom: 30px;
+    }
+
+    .hope {
+      background: #0bb59b;
+      padding: 50px 0;
+    }
+
+    .hope-img {
+      text-align: center;
+    }
+
+    .hope-hr {
+      border-color: #149C88;
+    }
+
+    .hope-title {
+      font-size: 140%;
+    }
+
+    .about {
+      background: #fff;
+      padding: 40px 0;
+      color: #7f8c8d;
+    }
+
+    .about-color {
+      color: #34495e;
+    }
+
+    .about-title {
+      font-size: 180%;
+      padding: 30px 0 50px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #7f8c8d;
+      margin: 0;
+      padding: 15px 0;
+      text-align: center;
+      background: #2d3e50;
+    }
+    .gy-background-color{
+      background-color: #fe8800;
+      color: #fff
+    } 
+    .gy-on:hover{
+      box-shadow: 4px 4px 4px #ccc;
+      background-color: #fff;
+    }
+    .gy-border{
+      border: none;
+    }
+    .gy-active>a{
+      color:#fe8800;
+    }
+    .gy-banner{
+      background-size:100%;
+    }
+    .get-btn{background-color: #fe8800;color: #fff}
+    header a{
+    }
+    .liuche{
+      padding: 32px 0
+    }
+    .liuche .am-u-sm-2{
+    text-align: left;
+    border-left: 1px solid #ccc
+    } 
+    .biaoqian{
+      width: 100%;
+      border: 1px solid #ccc;
+      height: 24px;
+      text-align: center;
+      line-height: 24px;
+     
+      margin-bottom: 8px;
+    }
+    .gyactive{
+       box-shadow: 2px 2px 2px #ccc;
+      color:#fe8800;
+      border-color: #fe8800;
+    }
+    .am-tabs a{
+      background-color: #f8f8f8;
+    }
+   
+    .gy-btn{
+      background-color: #fff;
+    
+      font-size: 14px;
+    }
+    .zhutihuodong{
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      z-index: 1000;
+
+      color: #333;
+    }
+    .am-btn-orge{
+      background-color: #fea53c;
+      color: #fff;
+    }
+    .am-btn-orges{
+     background-color: #fe8800;
+      color: #fff; 
+    }
+    #list li{
+      background-color: #fea53c;
+
+    }
+    .am-g-collapse .am-u-sm-6{
+      padding-right: 8px;
+      padding-bottom: 8px
+    }
+  </style>
+</head>
+<body>
+<!-- 主题页 -->
+<div class="zhutihuodong">
+  <div class="am-container">
+  <div class="am-g" style="position: relative;">
+    <a href="./zhuce.html">
+      <img src="./image/index4.jpg" alt="" width="100%">
+    </a>
+   
+    <div  style="line-height: 40px;text-align: right;position: absolute;top:16px;right: 16px"><span class="am-icon-times-circle-o am-icon-sm" onclick="losezhuti()"></span></div>
+  </div>
+  </div>
+</div>
+
+<!-- 注册 -->
+ <div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt">
+    <div class="am-modal-dialog">
+      <div class="am-modal-hd"><span class="am-icon-pencil" style="color: #fe8800">&nbsp</span>注册-<small>成为物流时尚人</small></div>
+      <div class="am-modal-bd">
+        
+        <input type="text" class="am-modal-prompt-input" placeholder="请输入您的手机号">
+        <input type="password" class="am-modal-prompt-input" placeholder="密码">
+        <div class="am-g am-modal-prompt-input am-g-collapse">
+          <div class="am-u-sm-8"> 
+            <input type="text" placeholder="" class="am-modal-prompt-input" style="width: 100%;margin: 0;"></div>
+          <div class="am-u-sm-4">
+            <button type="button" class="am-btn am-btn-secondary" style="padding-top: 5px;padding-bottom: 5px;line-height: 1.8rem"><small>获取验证码</small></button>
+          </div>
+        </div>
+      </div>
+      <div class="am-modal-footer">
+        <span class="am-modal-btn" data-am-modal-confirm>立即注册</span>
+      </div>
+    </div>
+  </div>
+<!-- 登录 -->
+<div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt1">
+    <div class="am-modal-dialog">
+      <div class="am-modal-hd"><span class="am-icon-pencil" style="color: #fe8800">&nbsp</span>登录-<small>成为物流时尚人</small></div>
+      <div class="am-modal-bd">
+        
+        <input type="text" class="am-modal-prompt-input" placeholder="请输入您的手机号">
+        <input type="password" class="am-modal-prompt-input" placeholder="密码">
+       
+      </div>
+      <div class="am-modal-footer">
+        <span class="am-modal-btn" data-am-modal-confirm>立即登录</span>
+      </div>
+    </div>
+  </div>
+
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+  <div class="am-topbar-brand dingbu" style="cursor: pointer;" onclick="window.location.href='./index.html'">
+    <strong data-am-smooth-scroll > <img src="./image/jzx.png" alt="" height="20">&nbsp集装箱调运</strong> 
+  </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class="am-active"><a href="#">首页</a></li>
+        <li class="zhongbu navs " data-am-dropdown><a href="./gonggao.html">集运天下™公告 </a></li>
+        <li class=" zhongbu navs"><a href="./about.html"class="dibu">关于罗济</a></li>
+        <!-- <li class="am-dropdown" data-am-dropdown>
+          <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+            关于罗济 <span class="am-icon-caret-down"></span>
+          </a>
+          <ul class="am-dropdown-content">
+           
+              <li class=" zhongbu navs"><a href="./about.html"class="dibu">关于我们</a></li>
+              <li class="  zhongbu navs"><a href="./lianxi.html">联系我们</a></li>
+          </ul>
+        </li> -->
+        <li class=" zhongbu navs"><a href="./zhuce.html"class="dibu">APP下载</a></li>
+        <li class=" zhongbu navs"><a href="./circle .html"class="dibu">跨境物流圈</a></li>
+
+      </ul>
+
+      <div class="am-topbar-right">
+        <button class="am-btn am-btn-orges am-topbar-btn am-btn-sm"  id="doc-prompt-toggle"><span class="am-icon-pencil"></span> 注册</button>
+        
+
+      </div>
+
+      <div class="am-topbar-right">
+        <button class="am-btn am-btn-orge am-topbar-btn am-btn-sm" id="doc-prompt-toggle1"><span class="am-icon-user"></span> 登录</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="am-container">
+<div class="get" style="padding: 0;background-color: #fff;border: none;">
+  <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+    <ul class="am-slides">
+       <li style="position: relative;height: auto;overflow: hidden;"><img src="./image/index2.jpg" />
+       
+      </li>
+      <li style="position: relative;height: auto;overflow: hidden;"><img src="./image/index0.jpg" />
+      
+      </li>
+      <li style="position: relative;height: auto;overflow: hidden;"><img src="./image/index1.jpg" />
+      
+      </li>
+
+      
+    </ul>
+  </div>
+ 
+  </div>
+</div>
+</div>
+<div class="detail">
+  <div class="am-g am-container">
+    <div class="am-u-lg-12">
+      <h2 class="detail-h2">改变传统跨境物流信息不对称、价格不透明、服务难追踪、效率损耗大的境况</h2>
+
+      <div class="am-g">
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+
+          <h3 class="detail-h3">
+            <i class="am-icon-mobile am-icon-sm"></i>
+            消除信息壁垒
+          </h3>
+
+          <p class="detail-p">
+            逐步消除各船公司各自为政带来的信息不对称及效率损耗，提升船公司所属箱源的租用频率。
+          </p>
+        </div>
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-cogs am-icon-sm"></i>
+            电子堆场
+          </h3>
+
+          <p class="detail-p">
+           引入电子堆场的概念大幅提升口岸城市集装箱堆场的使用效能和创收能力。
+          </p>
+        </div>
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-check-square-o am-icon-sm"></i>
+            创造性的智能匹配模式
+          </h3>
+
+          <p class="detail-p">
+           以极具创造性的智能匹配模型显著减少进出口货主群体的用箱成本和时间成本。
+          </p>
+        </div>
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-send-o am-icon-sm"></i>
+            信息互动，共享
+          </h3>
+
+          <p class="detail-p">
+           强化进出口物流链各环节的信息互动与共享降低车辆空驶带来的效率损耗，有效降低二氧化碳的排放，为城市增添生机与亮色。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="liuche" >
+  <div class="am-g am-container">
+    <h2 style="width: 100%;text-align: center;">业务流程</h2>
+    <!-- <div class="am-u-sm-2" style="border:none">
+      <div class="biaoqian gyactive" id="biaoqian_1">1</div>
+    发布拖车用箱需求</div>
+    <div class="am-u-sm-2">
+      <div class="biaoqian" id="biaoqian_2">2</div>
+    运力提供方/平台报价</div>
+    <div class="am-u-sm-2">
+      <div class="biaoqian" id="biaoqian_3">3</div>
+    拖车用箱方确认</div>
+    <div class="am-u-sm-2">
+      <div class="biaoqian" id="biaoqian_4">4</div>
+    填写委托信息（生成标准合同）</div>
+    <div class="am-u-sm-2">
+      <div class="biaoqian" id="biaoqian_5">5</div>
+    运力提供方/平台确认</div>
+    <div class="am-u-sm-2">
+      <div class="biaoqian" id="biaoqian_6">6</div>
+    业务执行（可选在线支付，线下支付等）</div>
+
+  </div> -->
+  <img src="./image/progress.png" alt="" width="100%">
+</div>
+
+<div class="am-container" style="padding-bottom: 72px;padding-top: 72px" >
+  <img src="./image/recruit.png" alt=""width="100%">
+
+    <div class="am-tabs" data-am-tabs="{noSwipe: 1}" id="doc-tab-demo-1">
+      <ul class="am-tabs-nav am-nav am-nav-tabs" id="list">
+        
+        <!--  <script id="templates" type="text/template">
+           {{~ it:data}} -->
+              <!-- 港口 -->
+             <li class="" ><a href="javascript: void(0)" style="padding: 16px 34px ">上海港</a></li>
+             <li class="" ><a href="javascript: void(0)" style="padding: 16px 34px ">青岛港</a></li>
+              <li class="" ><a href="javascript: void(0)" style="padding: 16px 34px ">深圳港</a></li>
+          
+<!-- 
+           {{~}}
+          </script> 
+      -->
+          
+      </ul>
+
+      <div class="am-tabs-bd" id="dist">
+<!-- 
+         <script id="templates" type="text/template">
+           {{~ it:data}} -->
+<!-- 港口详情   -->
+
+        <div class="am-tab-panel">
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-7" style="max-height: 360px;overflow: auto">
+            <!-- 公司 -->
+              <div class="am-u-sm-6" style="">
+                 <img src="./image/files/a5e32844-eb8b-4428-986a-1b6b3c1267db.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">兰琦物流（上海）有限公司 </small>
+              </div>
+              <div class="am-u-sm-6" style="">
+                 <img src="./image/files/15f659ba-8f8b-4559-9b05-ac98aac49913.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">上海丁霞物流有限公司 </small>
+              </div>
+             <div class="am-u-sm-6" style="">
+                 <img src="./image/files/a5e32844-eb8b-4428-986a-1b6b3c1267db.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">上海飞聚国际物流有限公司 </small>
+              </div>
+              <div class="am-u-sm-6" style="">
+                 <img src="./image/files/354b7036-b4ce-4d4b-8e29-3784ccaadfe5.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">上海凤威国际集装箱运输有限公司 </small>
+              </div>
+
+            </div>
+            <div class="am-u-sm-5" style="padding-left: 16px">
+            <!-- 港口简介 -->
+              <img src="./image/files/f27e3058-f7ee-4496-9911-c00878efddc4.png" alt="" width="100%" class="am-img-thumbnail am-radius">
+              <p >
+                <small >
+                  上海港位于中国大陆海岸线中部，长江与东海交汇处，北纬 31 度 14 分，东经 121 度 29 分。港口经营业务主要包括装卸、仓储、物流、船舶拖带、引航、外轮代理、外轮理货、海铁联运、中转服务以及水路客运服务等。
+                </small> 
+              </p>
+            </div>
+          </div>
+        </div>
+
+      <div class="am-tab-panel">
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-7" style="max-height: 360px;overflow: auto">
+            <!-- 公司 -->
+              <div class="am-u-sm-6" style="">
+                 <img src="./image/files/a5e32844-eb8b-4428-986a-1b6b3c1267db.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">兰琦物流（上海）有限公司 </small>
+              </div>
+              <div class="am-u-sm-6" style="">
+                 <img src="./image/files/15f659ba-8f8b-4559-9b05-ac98aac49913.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">上海丁霞物流有限公司 </small>
+              </div>
+             <div class="am-u-sm-6" style="">
+                 <img src="./image/files/a5e32844-eb8b-4428-986a-1b6b3c1267db.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">上海飞聚国际物流有限公司 </small>
+              </div>
+              <div class="am-u-sm-6" style="">
+                 <img src="./image/files/354b7036-b4ce-4d4b-8e29-3784ccaadfe5.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">上海凤威国际集装箱运输有限公司 </small>
+              </div>
+
+            </div>
+            <div class="am-u-sm-5" style="padding-left: 16px">
+            <!-- 港口简介 -->
+              <img src="./image/files/f27e3058-f7ee-4496-9911-c00878efddc4.png" alt="" width="100%" class="am-img-thumbnail am-radius">
+              <p >
+                <small >
+                  上海港位于中国大陆海岸线中部，长江与东海交汇处，北纬 31 度 14 分，东经 121 度 29 分。港口经营业务主要包括装卸、仓储、物流、船舶拖带、引航、外轮代理、外轮理货、海铁联运、中转服务以及水路客运服务等。
+                </small> 
+              </p>
+            </div>
+          </div>
+        </div>
+
+          <div class="am-tab-panel">
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-7" style="max-height: 360px;overflow: auto">
+            <!-- 公司 -->
+              <div class="am-u-sm-6" style="">
+                 <img src="./image/files/a5e32844-eb8b-4428-986a-1b6b3c1267db.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">兰琦物流（上海）有限公司 </small>
+              </div>
+              <div class="am-u-sm-6" style="">
+                 <img src="./image/files/15f659ba-8f8b-4559-9b05-ac98aac49913.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">上海丁霞物流有限公司 </small>
+              </div>
+             <div class="am-u-sm-6" style="">
+                 <img src="./image/files/a5e32844-eb8b-4428-986a-1b6b3c1267db.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">上海飞聚国际物流有限公司 </small>
+              </div>
+              <div class="am-u-sm-6" style="">
+                 <img src="./image/files/354b7036-b4ce-4d4b-8e29-3784ccaadfe5.png" alt="" width="100%"  class="am-img-thumbnail am-radius"><br>
+                <small style="color: #999;padding: 4px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden; ">上海凤威国际集装箱运输有限公司 </small>
+              </div>
+
+            </div>
+            <div class="am-u-sm-5" style="padding-left: 16px">
+            <!-- 港口简介 -->
+              <img src="./image/files/f27e3058-f7ee-4496-9911-c00878efddc4.png" alt="" width="100%" class="am-img-thumbnail am-radius">
+              <p >
+                <small >
+                  上海港位于中国大陆海岸线中部，长江与东海交汇处，北纬 31 度 14 分，东经 121 度 29 分。港口经营业务主要包括装卸、仓储、物流、船舶拖带、引航、外轮代理、外轮理货、海铁联运、中转服务以及水路客运服务等。
+                </small> 
+              </p>
+            </div>
+          </div>
+        </div>
+    
+
+
+<!--  {{~}}
+          </script>  -->
+      </div>
+    </div>  
+
+
+
+<!--    <script id="templates" type="text/template">
+      {{~ it:data }}
+      
+
+
+      {{~}}
+   </script> -->
+
+</div>
+<footer class="footer">
+  <!-- <div style="background-color: #2d3e50;color: #fff">
+      <div class="am-container">
+            <div class="am-g">
+              <div class="am-u-sm-3">常见问题<br>
+              <small>登录注册</small>
+              </div>
+              <div class="am-u-sm-3">拖车公司</div>
+              <div class="am-u-sm-3">货主/货代</div>
+              <div class="am-u-sm-3">集运天下</div>
+            </div>
+      </div> 
+  </div>         -->
+      <p>
+    copyright @2015-2015 all reserved 沪ICP备15036815号  &nbsp地址：上海市-宝山区-宝杨路3003号闿和·阳光广场505室
+        
+      </p>
+
+</footer>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<!-- <script src="assets/js/doT.min.js"></script> -->
+<!-- <script src="assets/js/app.js"></script> -->
+
+
+<script>
+ 
+  $('.dibu').on('click', function() {
+    var $w = $(window);
+    $w.smoothScroll({position: $(document).height() - $w.height()});
+  });
+  $('html, body').animate({scrollTop: 0}, '500');
+
+  $('.navs').on('click',function() {
+   
+     $('.navs').removeClass('gy-active');
+     $(this).addClass('gy-active');
+  })
+
+  $(function(){
+   var index =0; 
+   var liu=$(".biaoqian");
+
+   var timer = setInterval(function(){ 
+
+        index = (index == 6) ? 1 : index + 1;           
+     
+        //某个div显示，其他的隐藏 
+        liu.removeClass('gyactive');
+        $("#biaoqian_"+index).addClass("gyactive")     
+
+    }, 2000);
+
+      $('#doc-prompt-toggle').on('click', function() {
+        $('#my-prompt').modal({
+          relatedTarget: this,
+          onConfirm: function(e) {
+            alert('你输入的是：' + e.data || '')
+          },
+          onCancel: function(e) {
+            alert('不想说!');
+          }
+        });
+      });
+
+      $('#doc-prompt-toggle1').on('click', function() {
+        $('#my-prompt1').modal({
+          relatedTarget: this,
+          onConfirm: function(e) {
+            alert('你输入的是：' + e.data || '')
+          },
+          onCancel: function(e) {
+            alert('不想说!');
+          }
+        });
+      });
+
+      
+  })
+  function losezhuti(){
+    $('.zhutihuodong').css("display","none")
+  }
+</script>
+</body>
+</html>

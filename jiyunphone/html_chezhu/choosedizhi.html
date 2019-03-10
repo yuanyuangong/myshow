@@ -1,0 +1,236 @@
+VV<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/admin.css">
+  <style type="text/css">
+    #header{
+      position:fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      text-align: center;
+      background-color: #fff;
+      color: #333;
+    }
+    #section{
+      background-color:#f8f8f8; 
+      margin-top: 25px;
+     
+    }
+    .waitip{
+       position: absolute;
+        top: 50px;
+        right: 0px;
+        z-index: 1000;
+        overflow: hidden;
+        padding: 8px;
+        width: 100%
+    }
+       #tip {
+            background-color: #f8f8f8;
+            color: #555;
+            border:1px solid #ddd;
+            border-radius: 3px;
+          
+           
+            line-height: 36px;
+            width: 100%;
+           
+        }
+        #tip input[type="text"] {
+            line-height: 1.6rem;
+            height: 36px;
+            border: 0;
+            padding-left: 16px;
+            width: 100%;
+            
+            outline: none;
+        }
+        select{
+          width: 100%;
+          border-color: #ccc;
+          height: 36px;
+          line-height: 1.6rem;
+        }
+  </style>
+
+</head>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+<body id="body" onload="">
+<header class="am-topbar admin-header" id="header">
+  <div class="am-topbar-brand " onclick="history.go(-1)">
+    <strong class="am-icon-chevron-left"></strong> <span>选择地址&nbsp</span>
+  </div>
+  <div style="float: right;text-align: right;font-size: 1.6rem" class="am-topbar-brand " id="list">
+    
+  </div>
+  </div>
+</header>
+<section id="section">
+ 
+</section>
+<div class="waitip">
+<div id="tip">
+<div class="am-g am-g-collapse">
+  <div class="am-u-sm-4">
+    <select open id = 'subDistricts' ></select>
+  </div>
+  <div class="am-u-sm-8">
+    <input type="text" id="keyword" name="keyword" value="请输入关键字：(搜索)" onfocus='this.value=""'/>
+  </div>
+</div>
+    
+</div>
+<div id="tips" onclick="gydingwei()">232</div>
+</div>
+<script src="../css/assets/js/jquery.min.js"></script>
+<script src="../script/api.js"></script>
+
+  
+<!--<![endif]-->
+<script src="../script/api.js"></script>
+<script src="../css/assets/js/amazeui.min.js"></script>
+<script src="../css/assets/js/app.js"></script>
+<!-- <script src="http://webapi.amap.com/maps?v=1.3&key=781427a88b58a14081456b44a8e9f078&plugin=AMap.Geocoder"></script> -->
+<script src="http://webapi.amap.com/maps?v=1.3&key=781427a88b58a14081456b44a8e9f078&plugin=AMap.DistrictSearch"></script>
+<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+<script type="text/javascript">
+ var map = new AMap.Map("section", {
+            resizeEnable: true,
+            keyboardEnable: false,
+            center: new AMap.LngLat(116.306206, 39.975468),
+            zoom:16
+
+    });
+
+      var headerheight=$("#header").height();
+      var wH=$(window).height();
+      var mH=wH-headerheight;
+      var geolocation;
+      var lnglatXY;
+      var dizhi;
+      $(function(){
+        shezhigao();
+        
+         opengaodeditu();
+      
+      })
+
+      function shezhigao(){
+        $("#section").css("height",mH);
+      }
+
+      function opengaodeditu(){
+         var windowsArr = [];
+         var marker = [];
+   
+    AMap.plugin(['AMap.Autocomplete','AMap.PlaceSearch'],function(){
+      var autoOptions = {
+        city: 'gycity', //城市，默认全国
+        input: "keyword"//使用联想输入的input的id
+      };
+      autocomplete= new AMap.Autocomplete(autoOptions);
+      var placeSearch = new AMap.PlaceSearch({
+            city:'',
+            map:map
+      })
+      AMap.event.addListener(autocomplete, "select", function(e){
+         //TODO 针对选中的poi实现自己的功能
+         placeSearch.search(e.poi.name);
+          dizhi=e.poi.district+e.poi.name;
+          alert(dizhi)
+      });
+    });
+  }
+
+
+   function onComplete(data) {
+        var str=['定位成功'];
+        str.push('经度：' + data.position.getLng());
+        str.push('纬度：' + data.position.getLat());
+        str.push('精度：' + data.accuracy + ' 米');
+        str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+        document.getElementById('tips').innerHTML = str.join('<br>');
+        lnglatXY=[data.position.getLng(),data.position.getLat()];
+        alert(lnglatXY);
+        regeocoder();
+    };
+    function onError(){
+      alert("shibai");
+    }
+
+    function regeocoder() {  //逆地理编码
+        var geocoder = new AMap.Geocoder({
+            radius: 1000,
+            extensions: "all"
+        });        
+        geocoder.getAddress(lnglatXY, function(status, result) {
+            if (status === 'complete' && result.info === 'OK') {
+                geocoder_CallBack(result);
+            }
+        });        
+        var marker = new AMap.Marker({  //加点
+            map: map,
+            position: lnglatXY
+        });
+        map.setFitView();
+    }
+    function geocoder_CallBack(data) {
+        var address = data.regeocode.formattedAddress; //返回地址描述
+        document.getElementById("keyword").value = address;
+         var html = '';
+             html = '<span  tapmode="" onclick="tijiao()">确认</div>';
+        
+            $api.byId('list').innerHTML = html;
+    }
+ 
+    function tijiao(){
+      var type=api.pageParam.type;
+      alert(type);
+      if(0==type){
+        $api.setStorage('qishidi',address)
+      } 
+    }
+
+      var districtSearch = new AMap.DistrictSearch();
+        districtSearch.search('中国',function(status, result){
+            var subDistricts = result.districtList[0].districtList;
+            var select = document.getElementById('subDistricts');
+            for(var i = 0;i < subDistricts.length; i += 1){
+                    var name = subDistricts[i].name;
+                    var option = document.createElement('option');
+                    option.value = option.innerHTML = name;
+                    select.appendChild(option);
+
+            }
+            select.onchange = function(){
+              map.setCity(this.value);
+              var se=String(select.value);
+            
+              var gycity=se.substring(0,se.length-1);
+              alert(gycity)
+            };
+
+            select.value = subDistricts[0].name;
+            select.onchange();
+
+        })
+
+</script>
+</body>
+</html>

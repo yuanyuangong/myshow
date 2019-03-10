@@ -1,0 +1,300 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <style type="text/css">
+    #footer{
+      position: fixed;
+      bottom: 0;
+      z-index: 1000;
+      width: 100%;
+      /*height: 86px;*/
+      border-top: 1px solid #ccc;
+      background-color: #fff;
+      box-shadow: 1px 1px 1px #ccc;
+    }
+    #header{
+      background-color: #fff;
+      color: #333;
+      box-shadow: 1px 1px 1px #ccc;
+    }
+    .gy-padding{
+      padding: 0.5rem 1rem;
+      
+    }
+    .am-g{
+      text-align: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+    .gyborder{
+      border-right: 1px solid #ccc;
+    }
+    .gyactive{
+      color: #fea53c;
+    }
+
+    #main{
+    height: 100%;
+    width: 100%;
+    
+    }
+    #body{
+      overflow:auto;
+
+    }
+    #topbar-collapse >li{
+      color: #fff !important;
+    }
+    .gyfontwhite{
+      color: #333;
+    }
+    #gyfabu{
+      background-color:  #fea53c;
+      border-color:#f8f8f8; 
+      color: #FFF;
+      border-radius: 3px;
+    }
+    #nav{
+      background-color:#fff;
+      color: #010101;
+    }
+    #nav .am-u-sm-4:hover{
+      color: #fea53c;
+    }
+    #xuqiushounue{
+      width: 220px;
+      line-height: 36px;
+      border-radius: 6px ;
+      border:1px solid #ccc;
+      position: absolute;
+      top:40%;
+      left: 20%;
+      z-index: 1;
+      background-color:#fff; 
+    }
+    .fontsmall{
+      font-size: 11px;
+      line-height: 13px;
+    }
+    .gyorge{
+      background-color: #fea53c;
+      color: #fff;
+    }
+    .gyorgecolor{
+      color: #fea53c;
+    }
+    .gyfontleft{
+      text-align: left;
+    }
+    .gyfloatright{
+      float: right;
+      text-align: right;
+    }
+     #gywaike{
+        background-color: #f8f8f8;
+
+        border-radius: 3px; 
+        padding: 8px 8px;
+        height: 250px;
+        overflow: scroll;
+      }
+      .am-list{
+        border-radius: 3px;
+       }
+      .am-list li:hover{
+        color: #fea53c;
+      }
+      .gyline{
+        line-height: 32px;
+      
+      }
+      #gywaike .am-g{
+        padding:0;
+        border: 0;
+
+      }
+      .gyfontleft{
+        text-align: left;
+      }
+      .gyscroll{
+        overflow: scroll;
+      }
+  #xuqiu_frame{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    padding: 75% 8px 0 8px ;
+    background-color:rgba(1,1,1,0.4); 
+    z-index: 500;
+    display: none;
+  }
+  #xuqiu_frame .am-g{
+    padding-top: 0;
+    padding-bottom: 0;
+
+  }
+  </style>
+</head>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+<body id="body" onload="gyheight()">
+<header class="am-topbar admin-header" id="header">
+  <div class="am-topbar-brand">
+    <strong>LOGO</strong> <span>集装箱调运</span>
+  </div>
+
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse gyscroll" id="topbar-collapse">
+  
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list ">
+      <li><a href="./wodedingdan.html"><span class="am-icon-table gyfontwhite"></span> 订单记录 <span class="am-badge am-badge-warning">5</span></a></li>
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users gyfontwhite"></span>&nbsp刘某 18745363332<span class="am-icon-caret-down gyfontwhite"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="./gerenziliao.html"><span class="am-icon-user"></span> 资料</a></li>
+          <li ><a href="./shezhi.html"><span class="am-icon-cog"></span> 设置</a></li>
+          <li onclick="alert('>~< sorry,正在攻城中...')"><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+        </ul>
+      </li>
+       <li><a href="../html_1/main.html" ><span class="am-icon-retweet "></span> <span class=" gyorge">切换身份 </span></a></li>
+      <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- <div id="main" onload="gyh()" style="overflow: hidden;">
+  <img src="../image/624669377848171458.png" alt="" >
+
+</div> -->
+
+<iframe src="http://yuntu.amap.com/share/QRbQNj" frameborder="0"  id="main"  scrolling="">
+</iframe>
+<div id="xuqiu_frame" onclick="closeblock()">
+    <div class="am-g" style="background-color:#fff;">
+        <div class="am-u-sm-1">
+           &nbsp
+        </div>
+         <div class="am-u-sm-10">
+           &nbsp
+        </div>
+        <div class="am-u-sm-1">
+           <span class="am-icon-close"  onclick="closeblcok()"></span>
+        </div>
+    </div>
+   <div id="gywaike">
+    <div class="gyline">  
+    <ul class="am-list am-list-static am-list-border am-list-striped" >
+      <li class="gydisplay">
+      <div class="am-g" onclick="window.location.href='./xiangqing_che .html'
+">
+        <div class="am-u-sm-10 gyfontleft">车牌号：沪B12345 <br><small><span class="am-icon-map-marker gygreen">&nbsp</span>所在地：上海宝山</small></div>
+        <div class="am-u-sm-2"><span class="am-icon-angle-right am-icon-md"></span></div>
+      </div>
+      </li>
+
+       <li id="li-xiang">
+      <div class="am-g" onclick="window.location.href='./xiangqing_xiang.html'
+">
+        <div class="am-u-sm-10 gyfontleft">集装箱:20尺 <br><small><span class="am-icon-map-marker gygreen">&nbsp</span>所在地：上海宝山</small></div>
+        <div class="am-u-sm-2"><span class="am-icon-angle-right am-icon-md"></span></div>
+      </div>
+      </li>
+       <li di="li-chexiang">
+      <div class="am-g" onclick="window.location.href='./xiangqing_che_xiang.html'
+">
+        <div class="am-u-sm-10 gyfontleft">集装箱:20尺 / 车牌号：沪B12345 <br><small><span class="am-icon-map-marker gygreen">&nbsp</span>所在地：上海宝山</small></div>
+        <div class="am-u-sm-2"><span class="am-icon-angle-right am-icon-md"></span></div>
+      </div>
+      </li>
+    </ul>
+
+     
+  </div>   
+</div>
+</div>
+<div id="xuqiushounue" onclick="opennone()">
+      <div class="am-u-sm-2 gyorge"><span class="am-icon-upload"></span></div>
+      <div class="am-u-sm-10  gyfontleft"><small class="fontsmall">车牌号：沪C... / 箱：20'</small><span class="gyfloatright am-icon-angle-right"></span></div>
+ 
+</div>
+<footer id="footer">
+  <nav id="nav">
+    <div class="am-g">
+      <div id="fcheyuan" class="am-u-sm-4 gyborder gyorgecolor" onclick="gyOpenxuqiu(0)">车源</div>
+      <div id="fxiang" class="am-u-sm-4 gyborder" onclick="gyOpenxuqiu(1)">集装箱</div>
+      <div id="fchexiang" class="am-u-sm-4" onclick="gyOpenxuqiu(2)">车+集装箱</div>
+    </div>
+  </nav>
+  <div class="gy-padding"><a href="./fabu.html"><button type="button" class="am-btn am-btn-primary am-btn-block" id="gyfabu">我要发布</button></a>
+</div>
+</footer>
+
+  <!-- sidebar start -->
+
+  <!-- sidebar end -->
+
+<!-- content start -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../script/api.js"></script>
+<script src="../script/doT.min.js"></script>
+<script src="../script/SHA1.js"></script>
+<script src="../script/APICloud-rest.js"></script>
+
+<script type="text/javascript">
+    var gywaikes = $api.byId('xuqiu_frame');
+    var  navs = $api.domAll(nav, '.am-u-sm-4');
+    function closeblock(){ 
+     gywaikes.style.display="none";
+    }
+    function opennone(){
+      gywaikes.style.display="block";
+    }
+    
+    function gyOpenxuqiu(n){
+        
+          for(var i=0;i<navs.length;i++){
+            if (i==n) {
+              $api.addCls(navs[i], 'gyorgecolor');
+            }else{
+               $api.removeCls(navs[i], 'gyorgecolor');
+            }
+          }
+          // switch(n){
+          //   case 0:$api.byId('li-xiang').style.display.
+          // }                    
+    }
+    function gyheight(){
+      var headerheight=$("#header").height();
+      var footerheight=$("#footer").height();
+      var wH=$(window).height();
+      var mH=wH-headerheight-footerheight;
+   ;
+      $("#main").css("height",mH);
+
+    }
+</script>
+
+<!--<![endif]-->
+<script src="../assets/js/amazeui.min.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

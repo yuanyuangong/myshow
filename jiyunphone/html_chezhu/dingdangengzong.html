@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/admin.css">
+  <link rel="stylesheet" href="../css/assets/css/app.css">
+
+  <style type="text/css">
+    #header{
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+   #list .am-g{
+      text-align: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+     #footer{
+      position: fixed;
+      bottom: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 36px;
+      border-top: 1px solid #ccc;
+      background: #fff;
+    }
+    #doc-ta-1{
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+    #footer .am-g{
+      padding: 0;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    #footer .am-u-sm-6{
+      line-height: 36px;
+    }
+
+  </style>
+</head>
+
+<body id="body" >
+  <header class="am-topbar admin-header" id="header">
+    <div class="am-g">
+      <div class="am-u-sm-4">
+         <div class="am-topbar-brand " onclick="history.go(-1)">
+           <strong class="am-icon-chevron-left"></strong>
+         </div>
+      </div>
+      <div class="am-u-sm-4">
+        <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+          订单跟踪
+        </div>
+      </div>
+      <div class="am-u-sm-4" style="text-align: right;">
+        <div class="am-topbar-brand" style="float: right;">
+          <select data-am-selected={'btnSize':'sm','btnWidth':'100%'}>
+            <option value="a"selected>全部</option>
+            <option value="b">待确认</option>
+            <option value="o">待收货</option>
+            <option value="m">已完成</option>
+            <option value="m">挂网</option>
+      
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div style="height:  58px"></div>
+  <div id="list" >
+
+ <!--    <script id="template" type="text/template">
+      {{~ it:data }} -->
+<!-- 正在报价 -->
+    <ul class="am-list am-list-static am-list-border" style="border-radius: 3px" onclick="window.location.href='./orderdetail.html'">
+      <li style="padding-bottom: 4px">
+      <span class="am-icon-bookmark"></span>&nbspX3284928947 
+        <span class="gyfloatright"> 
+           <small style="color:#0c80ba ">状态: <span style="color: #999"><span style="color: #fea53c;">3</span>人报价</span>  </small>
+        </span>
+        </li>
+        <li style="padding-top: 4px">
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-8" style="text-align: left;">
+              <strong>
+               <span class="am-icon-upload gyorgecolor"></span>&nbsp<span>集装箱箱： 20'GP*4</span>
+              </strong> 
+            </div>
+            <div class="am-u-sm-4" style="text-align: right;">
+                <span class="am-badge am-badge-primary">出口</span>
+             <!--      <span class="am-badge am-badge-secondary">进口</span>
+                  <span class="am-badge am-badge-success">散货</span>
+                  <span class="am-badge am-badge-warning">外发</span>
+                  <span class="am-badge am-badge-danger">拼箱</span> -->
+            </div>
+          </div>
+          
+     
+          <small><span class="gyfontnormal">预约时间：3-24/12:24</span> </small>
+          <hr style="margin: 4px 0">
+          <span class="gygreen">&nbsp从&nbsp</span>上海嘉定<span class="gyred">&nbsp到&nbsp</span>某港区
+         
+        </li>
+    </ul>
+    <!-- 待确认运抵 -->
+      <ul class="am-list am-list-static am-list-border" style="border-radius: 3px" onclick="window.location.href='./orderdetail-confirm.html'">
+      <li style="padding-bottom: 4px">
+      <span class="am-icon-bookmark"></span>&nbspX3284928947 
+        <span class="gyfloatright"> 
+           <small style="color:#0c80ba ">状态: <span style="color: #999"><span style="color: #999"><span style="color: #fea53c;">已支付</span>，待确认运抵</span> </small>
+        </span>
+        </li>
+        <li style="padding-top: 4px">
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-8" style="text-align: left;">
+              <strong>
+               <span class="am-icon-upload gyorgecolor"></span>&nbsp<span>集装箱箱： 20'GP*4</span>
+              </strong> 
+            </div>
+            <div class="am-u-sm-4" style="text-align: right;">
+                <span class="am-badge am-badge-primary">出口</span>
+             <!--      <span class="am-badge am-badge-secondary">进口</span>
+                  <span class="am-badge am-badge-success">散货</span>
+                  <span class="am-badge am-badge-warning">外发</span>
+                  <span class="am-badge am-badge-danger">拼箱</span> -->
+            </div>
+          </div>
+          
+     
+          <small><span class="gyfontnormal">预约时间：3-24/12:24</span> </small>
+          <hr style="margin: 4px 0">
+          <span class="gygreen">&nbsp从&nbsp</span>上海嘉定<span class="gyred">&nbsp到&nbsp</span>某港区
+         
+        </li>
+    </ul>
+
+   
+     <!-- 已完成 -->
+     <ul class="am-list am-list-static am-list-border" style="border-radius: 3px" onclick="window.location.href='./orderdetail-finish.html'">
+      <li style="padding-bottom: 4px">
+      <span class="am-icon-bookmark"></span>&nbspX3284928947 
+        <span class="gyfloatright"> 
+           <small style="color:#0c80ba ">状态: <span style="color: #999"><span style="color: #999"><span style="color: #fea53c;">已完成</span></span></small>
+        </span>
+        </li>
+        <li style="padding-top: 4px">
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-8" style="text-align: left;">
+              <strong>
+               <span class="am-icon-upload gyorgecolor"></span>&nbsp<span>集装箱箱： 20'GP*4</span>
+              </strong> 
+            </div>
+            <div class="am-u-sm-4" style="text-align: right;">
+                <span class="am-badge am-badge-primary">出口</span>
+             <!--      <span class="am-badge am-badge-secondary">进口</span>
+                  <span class="am-badge am-badge-success">散货</span>
+                  <span class="am-badge am-badge-warning">外发</span>
+                  <span class="am-badge am-badge-danger">拼箱</span> -->
+            </div>
+          </div>
+          
+     
+          <small><span class="gyfontnormal">预约时间：3-24/12:24</span> </small>
+          <hr style="margin: 4px 0">
+          <span class="gygreen">&nbsp从&nbsp</span>上海嘉定<span class="gyred">&nbsp到&nbsp</span>某港区
+         
+        </li>
+    </ul>
+    <!-- 挂网 -->
+    <ul class="am-list am-list-static am-list-border" style="border-radius: 3px" onclick="window.location.href='./orderdetail-1.html'">
+      
+        <li style="padding-top: 8px">
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-8" style="text-align: left;">
+              <strong>
+               <span class="am-icon-upload gyorgecolor"></span>&nbsp<span>集装箱箱： 20'GP*4</span>
+              </strong> 
+            </div>
+            <div class="am-u-sm-4" style="text-align: right;">
+                <span class="am-badge am-badge-primary">出口</span>
+             <!--      <span class="am-badge am-badge-secondary">进口</span>
+                  <span class="am-badge am-badge-success">散货</span>
+                  <span class="am-badge am-badge-warning">外发</span>
+                  <span class="am-badge am-badge-danger">拼箱</span> -->
+            </div>
+          </div>
+          
+     
+          <small><span class="gyfontnormal">预约时间：3-24/12:24</span> </small>
+          <hr style="margin: 4px 0">
+          <span class="gygreen">&nbsp从&nbsp</span>上海嘉定<span class="gyred">&nbsp到&nbsp</span>某港区
+         
+        </li>
+    </ul>
+ <!--   {{~}}
+
+    </script> -->
+  </div>
+<!-- content start -->
+<script src="../css/assets/js/jquery.min.js"></script>
+<script src="../css/assets/js/amazeui.min.js"></script>
+
+
+
+<script>
+
+
+</script>
+</body>
+</html>

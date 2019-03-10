@@ -1,0 +1,239 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="JIZHUANGXIANG" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/admin.css">
+  <link rel="stylesheet" href="../css/assets/css/app.css">
+  <style type="text/css">
+    .am-topbar-brand{
+      padding:0;
+    }
+    .yuan{
+      width: 100%;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-radius:16px;
+      padding: 8px
+    }
+    .xiaotishi{
+    background-color: #fea53c;color: #fff;
+    }
+    .am-btn-group label{
+      width: 50%;
+    }
+    .youren li{
+      padding-left: 8px
+    }
+  </style>
+
+</head>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+
+<body id="body" >
+<header class="am-topbar admin-header" id="header">
+<div class="am-g">
+  <div class="am-u-sm-3">
+     <div class="am-topbar-brand " onclick="history.go(-1)">
+       <strong class="am-icon-chevron-left"></strong>
+     </div>
+  </div>
+  <div class="am-u-sm-6">
+    <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+      推荐返利
+    </div>
+  </div>
+  <div class="am-u-sm-3">
+    <div class="am-topbar-brand gyfloatright">
+      <span  type="button" class="am-icon-group " style=" "  data-am-modal="{target: '#my-popup'}">
+      
+      </span>
+
+    </div>
+  </div>
+</div>
+
+</header>
+
+<div class="am-popup" id="my-popup">
+    <div class="am-popup-inner">
+      <div class="am-popup-hd">
+        <h4 class="am-popup-title">我的人气</h4>
+        <span data-am-modal-close
+              class="am-close">&times;</span>
+      </div>
+      <!-- 选择 -->
+      <div class="am-g" style="background-color: #f8f8f8;">
+        <div class="am-btn-group doc-js-btn-1" data-am-button style="width: 100%">
+          <label class="am-btn gyactive" name="la">
+            <input type="radio" name="options" value="1" id="option1"> 已推荐
+          </label>
+          <label class="am-btn" name="la">
+            <input type="radio" name="options" value="2" id="option2"> 未推荐
+          </label>
+        </div>
+      </div>
+    
+   
+      
+     <!-- 未推荐 -->
+      <ul class="am-list am-list-static youren" id="list">
+       
+
+
+      </ul>
+      
+    </div>
+  
+</div>
+
+
+<section id="">
+  <img src="../image/fangli.png" alt="" width="100%">
+  <div style="margin: 8;text-align: center;width: 100%;color: #999"><small>
+  <a href="./fanlijiaocheng.html">查看返利教程</a></small></div>
+  <div class="am-g" style="background-color: #fff;padding: 16px">
+    <p style="padding: 0 8px;text-align: center;">
+      <small>推送给朋友，朋友注册，将获取100蓝钻，好友交易支付时</small>
+      <br>
+      <strong style="font-size: 1.8rem">您将获取10%的返利<br></strong>
+      <small style="color: #fea53c">你同样可以获取好友的好友交易支付的返利</small>
+           
+    </p>
+  </div>
+  <div class="am-g"style="padding-top: 16px">
+    <div class="am-u-sm-6" data-am-modal="{target: '#my-popup'}">
+      <div class="yuan" style="border-color:#72d350 ">
+        <strong>0</strong>人<br>
+        <small>我的人气</small>
+      </div>
+    </div>
+    <div class="am-u-sm-6">
+      <div class="yuan" style="border-color:#fc4747 ">
+        <strong>0</strong>元<br>
+        <small>累计获益</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="am-g" style="padding: 8px;padding-top: 32px">
+    <button class="am-btn am-btn-block gyactive" style="border-radius:3px; " onclick="alert('调用微信接口')">立即推送</button>
+  </div>
+
+</section>
+<script src="../css/assets/js/jquery.min.js"></script>
+<script src="../css/assets/js/amazeui.min.js"></script>
+<script src="../script/doT.min.js"></script>
+<!-- <script src="../script/api.js"></script> -->
+<!--<![endif]-->
+<script type="text/x-dot-template" id="tpi-list-item">
+  
+  {{~ data.shuliang:value:index}}
+  {{? it.type==1}}
+      <li>
+      <div class="am-g">
+        <div class="am-u-sm-6"> 
+          葛捏<br><small>2015-12-24</small>
+        </div>
+        <div class="am-u-sm-6">
+          <small>累计获得返利：</small><br>
+          <span style="color: #fea53c">￥20</span>
+        </div>
+      </div>
+       
+      </li>
+
+  {{??}}
+
+     <li>
+      <div class="am-g">
+        <div class="am-u-sm-6"> 
+           大吉倒萨
+        </div>
+        <div class="am-u-sm-6" style="color: #fea53c;text-align: right;">
+          立即推荐
+        </div>
+      </div>
+       
+      </li>
+  {{?}}
+  {{~}}
+</script>
+
+
+<script type="text/javascript">
+var n=false;
+
+var data={'type':1,'shuliang':['1','2','3']};
+
+var html;
+  function gyjihuo(){
+    var name=$("#name");
+    var card=$("#card");
+    var bianji=$("#bianji");
+    var toux=$("#toubu");
+    if(false==n){bianji.html("提交");
+     bianji.css("color","#fea53c");
+     name.attr("disabled",false);
+     card.attr("disabled",false);
+     toux.attr("disabled",false)
+   }else{
+     bianji.html("编辑");
+     bianji.css("color","#333");
+     setTimeout(function() {
+      alert("提交成功")
+     }, 1000);
+     name.attr("disabled",true);
+     card.attr("disabled",true);
+
+   }
+    n=!n;
+    
+  }
+
+  $(function() {
+    var template=$('#tpi-list-item').html();
+    // alert(template);
+    var compiler =doT.template(template);
+
+   
+    var html=compiler(data);
+    // alert(html);
+    $("#list").html(html);
+
+    var $radios = $('[name="options"]');
+    var $label = $('[name="la"]');
+
+    $radios.on('change',function() {
+
+      data.type=$radios.filter(':checked').val();
+      $label.removeClass("gyactive");
+
+      $(this).parent().addClass('gyactive');
+      // alert(data.type);
+      html=compiler(data);
+      // alert(html);
+      $("#list").html(html);
+
+      console.log('单选框当前选中的是：', $radios.filter(':checked').val());
+    });
+
+  })
+</script>
+</body>
+</html>

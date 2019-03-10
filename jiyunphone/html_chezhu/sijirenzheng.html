@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/admin.css">
+  <link rel="stylesheet" href="../css/assets/css/app.css">
+  <style type="text/css">
+    #toubu{
+      padding-left: 8px
+    }
+    #touxiang{
+      height: 48px;
+      width: 48px;
+      border:1px solid #ccc;
+      position: relative;
+      float: left;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-right: 8px;
+    }
+    #touxiangpic{
+      position: absolute;
+      top: 50%;
+      margin-top: -21px;
+      left: 50%;
+      margin-left:-14px; 
+    }
+    input{
+      border: none;
+      background-color: #fff;
+      width: 100%
+    }
+    .am-topbar-brand{
+      padding:0;
+    }
+  </style>
+</head>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+
+<body id="body" >
+<header class="am-topbar admin-header" id="header">
+<div class="am-g">
+  <div class="am-u-sm-3">
+     <div class="am-topbar-brand " onclick="history.go(-1)">
+       <strong class="am-icon-chevron-left"></strong>
+     </div>
+  </div>
+  <div class="am-u-sm-6">
+    <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+      司机认证
+    </div>
+  </div>
+  <div class="am-u-sm-3">
+    <div class="am-topbar-brand gyfloatright">
+      <span ><small>提交</small></span>
+    </div>
+  </div>
+</div>
+
+</header>
+
+<!-- <header class="am-topbar admin-header" id="header">
+  <div class="am-topbar-brand " onclick="history.go(-1)">
+    <strong class="am-icon-chevron-left"></strong> <span>个人资料&nbsp</span>
+  </div>
+  
+</header> -->
+
+<section id="" class="am-form">
+  <ul class="am-list am-list-static gypadding">
+     <li>
+
+        <div class="am-g" onclick="./qiyerenzheng.html">
+          <div class="am-u-sm-4" >司机姓名</div>
+          <div class="am-u-sm-8" style="color: #999">
+            张宇建
+          </div>
+        </div>
+
+     </li>
+
+     <li>
+      <div class="am-g">
+        <div class="am-u-sm-4">车牌号</div>
+        <div class="am-u-sm-8" style="color: #999">
+          <input type="text"  placeholder="请输入" id=""  class="am-input-sm" />
+        </div>
+      </div>
+     </li>
+     <li>
+      <div class="am-g">
+        <div class="am-u-sm-4" >驾驶执照</div>
+        <div class="am-u-sm-8" style="color: #999">
+          <div class="am-form-file">
+            <button type="button" class="am-btn am-btn-xs" style="width: 100%;background-color: #fff">
+              <i class="am-icon-cloud-upload"></i> 选择要上传的文件</button>
+            <input id="doc-form-file" type="file" multiple>
+          </div>
+
+        </div>
+      </div>
+      <div id="file-list" style="padding: 16px;display: none">
+   
+      </div>
+       
+      </div>
+     </li>
+    </ul> 
+</section>
+
+
+<script src="../css/assets/js/jquery.min.js"></script>
+<script src="../script/api.js"></script>
+<!--<![endif]-->
+
+<script type="text/javascript">
+var n=false;
+
+  function gyjihuo(){
+    var name=$("#name");
+    var card=$("#card");
+    var bianji=$("#bianji");
+    var toux=$("#toubu");
+    if(false==n){bianji.html("提交");
+     bianji.css("color","#fea53c");
+     name.attr("disabled",false);
+     card.attr("disabled",false);
+     toux.attr("disabled",false)
+   }else{
+     bianji.html("编辑");
+     bianji.css("color","#333");
+     setTimeout(function() {
+     alert("提交成功")
+     }, 1000);
+     name.attr("disabled",true);
+     card.attr("disabled",true);
+
+   }
+    n=!n;
+    
+  }
+
+  $(function(){
+    
+     $('#doc-form-file').on('change', function() {
+      var fileNames = '';
+      var obj=$('#doc-form-file');
+      var urls = getObjectURL(this.files[0]);
+      $.each(this.files, function() {
+        
+        fileNames += "<img src=" + urls + " width='100%' id='card'/> ";
+        $('#file-list').css('display','block');
+      });
+      $('#file-list').html(fileNames);
+       
+    });
+
+  })
+  function getObjectURL(file) {
+      var url = null ; 
+      if (window.createObjectURL!=undefined) { // basic
+        url = window.createObjectURL(file) ;
+      } else if (window.URL!=undefined) { // mozilla(firefox)
+        url = window.URL.createObjectURL(file) ;
+      } else if (window.webkitURL!=undefined) { // webkit or chrome
+        url = window.webkitURL.createObjectURL(file) ;
+      }
+      return url ;
+    }
+</script>
+</body>
+</html>

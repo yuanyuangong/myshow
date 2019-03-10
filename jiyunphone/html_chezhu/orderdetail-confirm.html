@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/admin.css">
+  <link rel="stylesheet" href="../css/assets/css/app.css">
+
+  <style type="text/css">
+    #header{
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+    footer{
+      position: fixed;
+      bottom: 0;
+      width:100%;
+    }
+    .am-topbar-brand{
+      padding:0;
+    }
+  </style>
+</head>
+
+<body id="body" >
+  <header class="am-topbar admin-header" id="header">
+    <div class="am-g">
+      <div class="am-u-sm-2">
+         <div class="am-topbar-brand " onclick="history.go(-1)">
+           <strong class="am-icon-chevron-left"></strong>
+         </div>
+      </div>
+      <div class="am-u-sm-8">
+        <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+        订单详情
+        </div>
+      </div>
+      <div class="am-u-sm-2" style="text-align: right;">
+        <span class=""></span>
+      </div>
+    </div>
+  </header>
+  <div style="height:  50px"></div>
+  <div id="list" >
+
+ <!--    <script id="template" type="text/template">
+      {{~ it:data }} -->
+<!-- 正在报价 -->
+    <ul class="am-list am-list-static am-list-border" style="border-radius: 3px">
+         <li style="padding-bottom: 4px">
+           <span class="am-icon-bookmark"></span>&nbspX3284928947 
+        
+        </li>
+        <li style="padding-top: 4px">
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-8" style="text-align: left;">
+              <strong>
+               <span class="am-icon-upload gyorgecolor"></span>&nbsp<span>集装箱箱： 20'GP*4</span>
+              </strong> 
+            </div>
+            <div class="am-u-sm-4" style="text-align: right;">
+                <span class="am-badge am-badge-primary">出口</span>
+             <!--      <span class="am-badge am-badge-secondary">进口</span>
+                  <span class="am-badge am-badge-success">散货</span>
+                  <span class="am-badge am-badge-warning">外发</span>
+                  <span class="am-badge am-badge-danger">拼箱</span> -->
+            </div>
+          </div>
+          <span class="am-icon-home">&nbsp</span>箱东：箱东甲
+         
+
+        </li>
+        <li style="padding-top: 4px;padding-bottom: 4px">
+           <small><span class="gyfontnormal">预约时间：3-24/12:24</span> </small>
+        </li>
+        <li>
+          <span class="gygreen">&nbsp从&nbsp</span>上海港<span class="gyred">&nbsp到&nbsp</span>某港区
+          <hr style="margin: 4px 0">
+          <span class="am-icon-map-marker" style="color: #fea53c">&nbsp</span>装卸地址：---
+        </li>
+        <li style="background-color: #f8f8f8;text-align: center;padding: 4px">
+           <small style="color:#0c80ba ">状态: <span style="color: #999"><span style="color: #fea53c;">已支付</span>，待确认运抵</span>  </small
+        </li>
+
+        <li>
+          <div class="am-g">
+            <div class="am-u-sm-8" style="padding: 0" onclick="">
+               承运方： &nbsp <small>高师傅</small><br>
+              <small class="am-icon-home" style="color: #999">&nbsp上海集装宝集装箱有限公司</small>
+            </div>
+            <div class="am-u-sm-4" style="padding: 0">
+             <button class="am-btn gyactive am-btn-block" style="font-size: 12px;" onclick="alert('拨打电话')">联系他</button>
+               
+            </div>
+          </div>
+        </li>
+
+  
+    </ul>
+ <!--   {{~}}
+
+    </script> -->
+  </div>
+<footer>
+  
+  <div class="am-u-g" style="padding:8px">
+    <div class="am-u-sm-6">
+      <button type="button" class="am-btn am-btn-block am-btn-primary am-btn-sm" onclick="alert('确定吗，需要输入密码验证'),window.location.href='./orderdetail-finish.html'">
+        确认完成
+      </button>   
+    </div>
+    <div class="am-u-sm-6">
+      <button type="button" class="am-btn am-btn-block gyactive am-btn-sm" onclick="alert('已向司机发送信息')">
+        催促司机
+      </button>   
+    </div>
+  </div>
+</footer>
+<!-- content start -->
+
+</script>
+</body>
+</html>

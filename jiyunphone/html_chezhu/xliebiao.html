@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>lunbo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+
+    <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="../css/assets/css/admin.css">
+    <link rel="stylesheet" href="../css/assets/css/app.css">
+    <!-- Demo styles -->
+    <style type="text/css">
+    .am-topbar-brand{
+      padding:0;
+    }
+    .am-offcanvas-bar,.am-offcanvas-bar:after{
+      background-color: rgba(248,248,248,0.8);
+    }
+     .am-offcanvas-bar{
+      width: 60%
+     }
+     .am-offcanvas-content{
+      padding: 0;
+     }
+    </style>
+</head>
+<body>
+<div id="main">
+          <ul class="am-list am-list-static am-list-border" style="margin-bottom: 12px">
+          <li >
+            <div class="am-g am-g-collapse">
+              
+              <div class="am-u-sm-8">
+                附近共30单资源供选择
+              </div>
+              <div class="am-u-sm-2" style="border-left: 1px solid #ccc;text-align: right;"><small><a  href="#doc-oc-demo1" data-am-offcanvas>筛选</a></small></div>
+            </div>
+          </li>
+          </ul>
+<!-- 筛选 -->
+          <div id="doc-oc-demo1" class="am-offcanvas am-form">
+            <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+              <div class="am-offcanvas-content">
+                <ul class="am-list am-list-static" style="line-height: 16px;text-align: left;color:#333">
+                <li>
+                  <span class="am-icon-thumb-tack" style="padding-left: 8px"></span>&nbsp筛选条件
+                </li>
+              </ul>
+              <div style="line-height: 16px;text-align: left;padding-left: 8px">
+                <small >运输区间</small>
+              </div>
+              
+              <ul class="am-list am-list-static" style="line-height: 16px;text-align: left;color:#333;margin-top: 8px;font-size: 16px">
+                <li style="padding-left: 8px"> 
+                 
+                  <div class="am-g am-g-collapse"> 
+                    <div class="am-u-sm-12">
+                      <div class="am-form-icon">
+                        <i class="gygreen am-icon-map-marker"></i>
+                        <select name="" id="" class="am-input-sm" style="padding-left: 24px">
+                          <option value="">上海港</option>
+                          <option value="">株洲港</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div> 
+                 
+                </li>
+                <li style="padding-left: 8px">  
+               
+                   <div class="am-g am-g-collapse"> 
+                    <div class="am-u-sm-12">
+                      <div class="am-form-icon">
+                        <i class="gyred am-icon-map-marker"></i>
+                        <select name="" id="" class="am-input-sm" style="padding-left: 24px">
+                          <option value="">上海港</option>
+                          <option value="">株洲港</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div> 
+                </li>
+              </ul>
+              
+              <div style="line-height: 16px;text-align: left;padding-left: 8px">
+                <small >集装箱</small>
+              </div>
+              
+              <ul class="am-list am-list-static" style="line-height: 16px;text-align: left;color:#333;margin-top: 8px;font-size: 16px">
+                <li style="padding-left: 8px;padding-right: 8px">  
+                  <div class="am-g am-g-collapse">
+                    <div class="am-u-sm-4 gynowrap" style="line-height: 20px"><small>箱东:</small></div>
+                    <div class="am-u-sm-8">
+                      <select name="" id="" class="am-input-sm">
+                        <option value="">箱东1</option>
+                        <option value="">箱东1</option>
+                        <option value="">箱东1</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+                <li style="padding-left: 8px;padding-right: 8px">  
+                  <div class="am-g am-g-collapse">
+                    <div class="am-u-sm-2 gynowrap" style="line-height: 20px"><small>箱型:</small></div>
+                    
+                    <div class="am-u-sm-8">
+                      <select name="" id="" class="am-input-sm">
+                        <option value="">20</option>
+                        <option value="">20</option>
+                        <option value="">20</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+                <li style="padding-left: 8px;padding-right: 8px">  
+                  <div class="am-g am-g-collapse">
+                    <div class="am-u-sm-2 gynowrap" style="line-height: 20px"><small>箱种:</small></div>
+                    
+                    <div class="am-u-sm-8">
+                      <select name="" id="" class="am-input-sm">
+                        <option value="">20</option>
+                        <option value="">20</option>
+                        <option value="">20</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <div style="line-height: 16px;text-align: left;padding-left: 8px">
+                <small >运输条件</small>
+              </div>
+              
+              <ul class="am-list am-list-static" style="line-height: 16px;text-align: left;color:#333;margin-top: 8px;font-size: 16px">
+                <li style="padding-left: 8px;padding-right: 8px">  
+                  <div class="am-g am-g-collapse">
+                    <div class="am-u-sm-4 gynowrap" style="line-height: 20px"><small>运输日期:</small></div>
+
+                    <div class="am-u-sm-8">
+                      <select name="" id="" class="am-input-sm">
+                        <option value="">不限</option>
+                        <option value="">今天</option>
+                        <option value="">明天</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+                
+              </ul>
+
+              </div>
+            </div>
+          </div>
+ <!--   <script id="template" type="text/template">
+
+     {{~ it:data }} -->
+          <ul class="am-list am-list-static am-list-border">
+            <li style="padding-bottom: 4px" onclick="window.parent.location.href='./xiangqing-che.html'"> 
+              <div class="am-g" style="padding: 0">
+                <div class="am-u-sm-12" style="padding-left: 0;">
+                   <i class="am-icon-stack-exchange" style="color: #fea53c"></i>
+                   <strong>集装箱：20'GP&nbsp/&nbsp</strong> <span class="am-icon-home">&nbsp箱东：箱东甲</span>
+                   <br>
+                   <small>
+                     <i class="am-icon-clock-o am-icon-fw"></i>
+                      发运时间：2016-04-18 / 12：34
+                   </small> 
+                </div>
+                <div class="am-u-sm-2" style="text-align: right;white-space: nowrap;padding: 0"></div>
+           
+              </div>
+            </li>
+            <li style="padding-top: 4px;padding-bottom: 4px">
+              <span class="gygreen">从&nbsp</span>上海港<span style="color: #fe2222">&nbsp到</span>&nbsp厦门港
+            </li>
+           
+            <li>
+              <div class="am-g" >
+               
+                
+
+                <div class="am-u-sm-12">
+                  <button type="button" class="am-btn am-btn-secondary am-btn-block" style="font-size: 12px" onclick="alert('拨打司机电话')" >联系他</button>
+
+                </div>
+              </div>  
+            </li>
+          </ul>
+          
+    <script src="../script/doT.min.js"></script>
+    <script src="../script/SHA1.js"></script>
+    <script src="../css/assets/js/jquery.min.js"></script>
+
+    <script src="../css/assets/js/amazeui.min.js"></script>
+
+    <script type="text/javascript">
+
+
+    // 弹出报价窗口
+
+
+
+</script>
+</body>
+</html>

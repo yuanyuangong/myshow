@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>集装箱调运</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/app.css"/>
+  <style>
+    
+  </style>
+  <script type="text/javascript" src="../script/SHA1.js"></script>
+  <script type="text/javascript" src="../script/gy.js"></script>
+  <script type="text/javascript" src="../script/APICloud-rest.js"></script>
+  <script type="text/javascript" src="../script/api.js"></script>
+  <script type="text/javascript" src="../css/assets/js/jquery.min.js"></script>
+
+</head>
+<body >
+  <header class="am-topbar admin-header" id="header">
+   <div class="am-topbar-brand " onclick="history.go(-1)">
+      <strong class="am-icon-chevron-left"></strong> <span>注册</span>
+    </div>
+  </header>
+
+  <div class="am-g">
+    <div class="am-u-lg-6 am-u-md-8 am-u-sm-vecentered">
+       <div method="post" class="am-form">
+        <label for="username">用户名:</label>
+        <input type="username" name="" id="user" value="" placeholder="请输入11位手机号码">
+        <br>
+        <label for="password">密码:</label>
+        <input type="password" name="" id="password" value="">
+        <br>
+        <div class="am-g">
+          <div class="am-u-sm-8"> <input type="verification" name="" id="verification" value=""></div>
+          <div class="am-u-sm-4"> <input type="submit" name="" value="获取验证码" class="am-btn am-btn-secondary am-btn-sm am-fl am-btn-block gy-height-baifenbai" ></div>
+        </div>
+       
+        <br>
+
+        <div class="am-cf">
+         <input onclick="window.location.href='login.html'" type="submit" name="" value="立即注册" class="am-btn am-btn-primary am-btn- am-btn-sm am-fl am-btn-block ">
+          <br>
+        </div>
+   
+</div>
+      
+    </div>
+  </div>
+
+
+<script>
+    $(function(){
+        gyInit();
+
+    });
+
+    var userName,password;
+
+    function gyInit(){
+      userName = $api.byId('user');
+      password = $api.byId('password');
+ 
+    };
+     
+
+    function gyreign(){
+
+      var now =Date.now();
+      var appKey = SHA1("A6902227200065"+"UZ"+"94BC5D5F-A237-4760-9350-865B677E12E5"+"UZ"+now)+"."+now;
+      
+      var mobile =userName.value;
+      var pwd =password.value;
+
+        if (!/\d{11}/gi.test(mobile)) {
+            alert('请输入11位手机号码');
+
+            return;
+        };
+        if(pwd.length==0){
+          alert('请输入密码');
+          return;
+        }
+    
+
+        api.showProgress({
+          title:'注册中',
+          modal:true
+        });
+
+          $.ajax({
+        "url": "https://d.apicloud.com/mcm/api/user",
+        "method": "POST",
+        "cache": false,
+        "headers": {
+          "X-APICloud-AppId": "A6902227200065",
+          "X-APICloud-AppKey":  appKey
+        },
+        "data": {
+            "username":mobile,
+            "password": pwd
+          }
+
+      }).success(function (data, status, header) {
+        api.hideProgress();
+        if(202==header.status){ alert("此号码已被注册");return};
+          $api.setStorage('users',mobile);
+          api.closeWin();
+      
+      }).fail(function (header, status, errorThrown) {
+         api.hideProgress();
+        alert("连接失败")
+      });
+    
+
+    }  
+</script>
+</body>
+</html>

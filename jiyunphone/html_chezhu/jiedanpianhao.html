@@ -1,0 +1,458 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicons.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/app.css">
+
+  <style type="text/css">
+    #header{
+      position:fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      text-align: center;
+      background-color: #fff;
+      color: #333;
+    }
+    #section{
+      padding: 0;
+      background-color:#f8f8f8; 
+      margin-top: 50px;
+    }
+    .am-form-group .am-btn{
+      font-size: 14px;
+    }
+    .padding-left-remove >li:first-child{
+    padding-left: 0!important;
+    padding-right: 0!important;
+    }
+     .padding-left-removes >li{
+    padding-left: 0!important;
+    padding-right: 0!important;
+    }
+    #call{
+      border: none;
+      width: 100%;
+
+    }
+    .leixing label{
+      border: 1px solid #fea53c;
+      width: 50%;
+    }
+      .am-topbar-brand{
+      padding:0;
+    }
+    footer{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .am-popup .am-slider li{
+      padding: 0;
+    }
+    #section{
+      padding-bottom: 50px
+    }
+  </style>
+</head>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<body>
+<header class="am-topbar admin-header" id="header">
+<div class="am-g">
+  <div class="am-u-sm-4">
+     <div class="am-topbar-brand " onclick="history.go(-1)">
+       <strong class="am-icon-chevron-left"></strong>
+     </div>
+  </div>
+  <div class="am-u-sm-4">
+    <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+      我的资源
+    </div>
+  </div>
+  <div class="am-u-sm-4">
+     <div class="am-topbar-brand" style="width: 100%;text-align: right;">
+     &nbsp
+     </div>
+  </div>
+</div>
+ 
+</header>
+<!-- confirm -->
+<div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+  <div class="am-modal-dialog">
+   
+    <div class="am-modal-bd">
+      你，确定要删除这单资源吗？
+    </div>
+    <div class="am-modal-footer">
+      <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+      <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+    </div>
+  </div>
+</div>
+
+<!-- popup -->
+
+<div class="am-popup" id="my-popup">
+  <div class="am-popup-inner">
+    <div class="am-popup-hd">
+      <h4 class="am-popup-title">发布资源</h4>
+      <span data-am-modal-close
+            class="am-close">&times;</span>
+    </div>
+    <div class="am-popup-bd" style="padding: 0;padding-bottom:64px ">
+    
+    <footer id="footer" style="padding: 16px">
+      <button class="am-btn am-btn-warning am-btn-block am-btn-sm">确认提交</button>
+    </footer>
+    
+      <div class="am-form-group" style="">
+         <ul class="am-list am-list-static">
+            <li>
+              <div class="am-g ">
+                <div class="am-u-sm-4">集装箱号</div>
+                <div class="am-u-sm-8 am-form">
+                  <input type="text" placeholder="" style="padding: 4px">
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <div class="am-g ">
+                <div class="am-u-sm-4">箱东</div>
+                <div class="am-u-sm-8 am-form">
+                  <select data-am-selected={btnWidth:'100%',btnSize:'sm'}>
+                    <option value="a">箱东1</option>
+                    <option value="b" selected>箱东1</option>
+                    <option value="o">箱东1</option>
+                    
+                  </select>
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <div class="am-g ">
+                <div class="am-u-sm-4">箱型</div>
+                <div class="am-u-sm-4">
+                  <select data-am-selected={btnWidth:'100%',btnSize:'sm'}>
+                    <option value="a">20'</option>
+                    <option value="b" selected>40'</option>
+                    <option value="o">45'</option>
+                    
+                  </select>
+                </div>
+                 <div class="am-u-sm-4">
+                  <select data-am-selected={btnWidth:'100%',btnSize:'sm'}>
+                    <option value="a">GP</option>
+                    <option value="b" selected>HC</option>
+                    <option value="o">RF</option>
+                    <option value="o">HT</option>
+                    <option value="o">OT</option> 
+                  </select>
+                </div>
+              </div>
+            </li>
+           
+            
+         </ul>
+           <ul class="am-list am-list-static am-list-border" style="position: relative;">
+              <li style="padding-bottom: 4px">
+                 <div class="am-g am-g-collapse">
+                   <div class="am-u-sm-12">
+                    <label for="doc-ipt-3" class="am-u-sm-4 am-form-label"><small class="gyred">目的港</small></label>
+                    <div class="am-u-sm-8">
+                      <select  data-am-selected={btnWidth:'100%','btnSize':'xs'}>
+                         <option value="a">上海港</option>
+                        <option value="b">连云港</option>
+                      </select>
+                    </div>
+                       
+                    
+                   </div>
+                 
+              </li>
+              <li>
+                <div class="am-g am-g-collapse">
+                  <div class="am-u-sm-4">
+                     <label for="doc-ipt-3" class="am-u-sm-4 am-form-label"><small class="gygreen">出发地&nbsp</small></label>
+                    <div class="am-u-sm-8">
+                      <select  data-am-selected={btnWidth:'100%','btnSize':'xs'}>
+                        <option value="a">上海</option>
+                        <option value="b">北京</option>
+                      </select>
+                    
+                   </div>
+                 </div> 
+                 <div class="am-u-sm-8">
+                 <div class="am-form-icon">
+                    <i class="am-icon-map-marker am-icon-fw gygreen"></i>
+                    <input type="text" class="am-form-field am-input-sm" placeholder="默认定位">
+                  </div>
+                 </div> 
+                </div>
+              </li>
+
+              <li>
+                <div class="am-g am-g-collapse" >
+                  <div class="am-u-sm-4" style="text-align: left;white-space:nowrap"> 
+                    最晚出发时间
+                  </div>
+                  <div class="am-u-sm-8">
+                    <div class="am-u-sm-7">
+                      <form action="" class="am-form" data-am-validator>
+                        <input type="text" class="am-form-field am-input-sm" placeholder="立即" data-am-datepicker readonly required  />                    
+                      </form>
+                    </div>
+                    <div class="am-u-sm-5">
+                      <select  data-am-selected={btnWidth:'100%',btnSize:'sm'}>
+                        <option value="a" >早班</option>
+                        <option value="b">中班</option>
+                        <option value="o">晚班</option>
+                        <option value="m" selected="">不限</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+               </li> 
+               
+            </ul>
+
+            <ul class="am-list am-list-static">
+              <div class="am-icon-cloud-upload" style="padding: 0 1rem 4px 1rem">&nbsp请上传箱体照片</div>
+              <li>
+
+                <div class="am-g ">
+
+                  <div class="am-u-sm-4" style="border-right:1px solid #ccc ">
+                    <div class="am-form-file">
+                      <small>箱正面</small>
+                      <input id="doc-form-file-2" type="file" multiple>
+                    </div>
+                    <div id="file-list-2" style="display: none"></div>  
+                  </div>
+                  <div class="am-u-sm-4" style="border-right:1px solid #ccc ">
+                    <div class="am-form-file">
+                      <small>箱侧面</small>
+                      <input id="doc-form-file-3" type="file" multiple>
+                    </div>
+                    <div id="file-list-3" style="display: none"></div>  
+                  </div>
+                  <div class="am-u-sm-4">
+                    <div class="am-form-file">
+                        <small>箱反面</small>
+                        <input id="doc-form-file-4" type="file" multiple>
+                      </div>
+                      <div id="file-list-4" style="display: none"></div>  
+                 </div>
+                </div>
+                                 
+              </li>
+            </ul>
+
+           <ul class="am-list am-list-static padding-left-removes">
+            
+            <li>
+              <div class="am-g">
+                <div class="am-u-sm-4" >姓名：</div>
+                <div class="am-u-sm-8">
+                  <div class="am-form">
+                      <input class="am-form-field am-input-sm" type="text" placeholder="山师傅" id="call">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="am-g" onclick="window.location.href='qiyerenzheng.html'">
+                <div class="am-u-sm-4" >所属公司:</div>
+                <div class="am-u-sm-8" style="text-align: right;color: #999">
+                  暂无&nbsp<span class="am-icon-angle-right am-icon-sm"></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="am-g" onclick="window.location.href='sijirenzheng.html'">
+                <div class="am-u-sm-4" >是否认证:</div>
+                <div class="am-u-sm-8" style="text-align: right;color: #999">
+                  未认证&nbsp<span class="am-icon-angle-right am-icon-sm"></span>
+                </div>
+              </div>
+            </li>
+           </ul>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+<section id="section" style="padding:1rem">
+  <ul class="am-list am-list-static am-list-border">
+    <li style="padding-bottom: 4px" >
+      <div class="am-g" style="padding: 0">
+        <div class="am-u-sm-10" style="padding-left: 0;">
+           <i class="am-icon-upload" style="color: #fea53c"></i>
+           <strong>集装箱: 20'GP*4</strong> 
+           <br>
+           <small>
+             <i class="am-icon-clock-o am-icon-fw"></i>
+              发车时间：2016-04-18 / 12：34
+           </small> 
+        </div>
+        <div class="am-u-sm-2" style="text-align: right;white-space: nowrap;padding: 0">
+
+        </div>
+   
+      </div>
+    </li>
+    <li style="padding-top: 4px;padding-bottom: 4px">
+      <span class="gygreen">从&nbsp</span>上海港<span style="color: #fe2222">&nbsp到</span>&nbsp厦门港
+    </li>
+   
+    <li>
+      <div class="am-g" >
+        <div class="am-u-sm-6">
+          <button type="button" class="am-btn am-btn-block " style="font-size: 12px" id="doc-confirm-toggle">关闭</button>
+        </div>
+        
+        <div class="am-u-sm-6">
+          <button type="button" class="am-btn am-btn-secondary am-btn-block" style="font-size: 12px" data-am-modal="{target: '#my-popup'}" >编辑</button>
+          <!-- 编辑，打开发布页面需要传值 -->
+        </div>
+
+      </div>  
+    </li>
+  </ul>
+  <ul class="am-list am-list-static am-list-border">
+  <li data-am-modal="{target: '#my-popup'}">
+    <span class="am-icon-edit am-icon-sm"></span>&nbsp添加资源
+  </li>
+  </ul>  
+</section>
+
+</body>
+
+<script src="../css/assets/js/jquery.min.js"></script>
+
+<script src="../css/assets/js/amazeui.min.js"></script>
+<!--<![endif]-->
+
+<script type="text/javascript">
+  $(function() {
+    var $toggleButton = $('#doc-single-toggle');
+    $toggleButton.on('click', function() {
+      setButtonStatus();
+    });
+
+    function setButtonStatus() {
+      var status = $toggleButton.hasClass('gyactive') ? '否' : '是';
+      $toggleButton.hasClass('gyactive')?
+      $toggleButton.removeClass('gyactive'): $toggleButton.addClass('gyactive');
+      $('#doc-single-toggle-status').text(status);
+    }
+
+    var m=true;
+  
+     var $cb = $('[name="doc-js-btn"]');
+      $cb.on('change', function() {
+       
+        $(this).parent().hasClass('gyactive')? $(this).parent().removeClass('gyactive'): $(this).parent().addClass('gyactive');
+        
+        var checked = [];
+        $cb.filter(':checked').each(function() {
+          checked.push(this.value);
+        });
+
+        console.log('复选框选中的是：', checked.join(' | '));
+      });
+
+
+
+       $('#doc-form-file-2').on('change', function() {
+          var fileNames = '';
+          var obj=$('#doc-form-file-2');
+          var urls = getObjectURL(this.files[0]);
+          $.each(this.files, function() {
+        
+        fileNames += "<img src=" + urls + " width='100%' id='card'/> ";
+            $('#file-list-2').css('display','block');
+          });
+           $('#file-list-2').html(fileNames);
+               
+        });
+       $('#doc-form-file-3').on('change', function() {
+          var fileNames = '';
+          var obj=$('#doc-form-file-3');
+          var urls = getObjectURL(this.files[0]);
+          $.each(this.files, function() {
+        
+        fileNames += "<img src=" + urls + " width='100%' id='card'/> ";
+            $('#file-list-3').css('display','block');
+          });
+           $('#file-list-3').html(fileNames);
+               
+        });
+       $('#doc-form-file-4').on('change', function() {
+          var fileNames = '';
+          var obj=$('#doc-form-file-4');
+          var urls = getObjectURL(this.files[0]);
+          $.each(this.files, function() {
+        
+        fileNames += "<img src=" + urls + " width='100%' id='card'/> ";
+            $('#file-list-4').css('display','block');
+          });
+           $('#file-list-4').html(fileNames);
+               
+        });
+
+       // confirm
+       $(function() {
+          $('#doc-modal-list').find('.am-icon-close').add('#doc-confirm-toggle').
+            on('click', function() {
+              $('#my-confirm').modal({
+                relatedTarget: this,
+                onConfirm: function(options) {
+                  var $link = $(this.relatedTarget).prev('a');
+                  var msg = $link.length ? '你要删除的链接 ID 为 ' + $link.data('id') :
+                    '确定了，但不知道要整哪样';
+                  alert(msg);
+                },
+                // closeOnConfirm: false,
+                onCancel: function() {
+                  alert('算求，不弄了');
+                }
+              });
+            });
+        });
+
+  })
+
+    function getObjectURL(file) {
+      var url = null ; 
+      if (window.createObjectURL!=undefined) { // basic
+        url = window.createObjectURL(file) ;
+      } else if (window.URL!=undefined) { // mozilla(firefox)
+        url = window.URL.createObjectURL(file) ;
+      } else if (window.webkitURL!=undefined) { // webkit or chrome
+        url = window.webkitURL.createObjectURL(file) ;
+      }
+      return url ;
+    }
+</script>
+
+</html>

@@ -1,0 +1,360 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/admin.css">
+  <link rel="stylesheet" href="../css/assets/css/app.css">
+  <style type="text/css">
+    #header{
+     position: fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+    .gy-padding{
+      padding: 8px;
+      line-height: 48px;
+    }
+    .am-g{
+      text-align: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+    #form{
+      background-color:#f8f8f8; 
+      margin-top: 50px;
+      overflow: auto;
+    }
+   #form .am-u-sm-4,.am-g{
+    padding: 0;
+    border: none;
+   }
+ 
+    .gy-fangkuai{
+      background-color: #fea53c;
+      color: #fff;
+    }
+    .gyborder{
+      border-top: 1px solid #ddd !important;
+       border-bottom: 1px solid #ddd !important;
+       border-left: 1px solid #ddd !important;
+    }
+   
+    #doc-ta-1{
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+    .gyactives{
+      color: #333;
+      background-color: #fea53c;
+    }
+
+   
+     .am-topbar-brand{
+      padding:0;
+    }
+    .am-datepicker-dropdown{
+      top: 200px !important;
+      /*bottom: 30px !important;*/
+
+    }
+     .am-popup-bd li{
+      padding: 8px;line-height: 32px
+    }
+  </style>
+  <script src="../script/SHA1.js"></script>
+</head>
+<body id="body" >
+<div class="am-modal am-modal-no-btn" id="my-popup" style="height:auto ;border-radius:3px;line-height: 40px;">
+      <div class="am-popup-inner" style="overflow: hidden;">
+        
+        <div class="am-popup-hd" style="height: auto">
+          <div class="am-g">
+            <div class="am-u-sm-6" style="border-right:1px solid #ccc ">省份</div>
+            <div class="am-u-sm-6">区域</div>
+          </div> 
+        </div>
+
+
+        <div class="am-popup-bd"style="height: auto;padding: 0;background-color: #ccc">
+      
+            <div class="am-g" style="padding-top: 8px">
+              <div class="am-u-sm-6" style="padding: 0;border-right:1px solid #ccc;">
+                <ul class="am-list" style="overflow: auto;height: 200px;">
+                  <li>上海</li>
+                  <li>北京</li>
+                  <li>你不</li>
+                  <li>每个</li>
+                  <li>上海</li>
+                  <li>北京</li>
+                  <li>你不</li>
+                  <li>每个</li>
+                </ul>
+              </div>
+               <div class="am-u-sm-6" style="padding: 0;">
+                <ul class="am-list" style="overflow: auto;height: 200px;">
+                  <li>上海</li>
+                  <li>北京</li>
+                  <li>京东</li>
+                  <li>嘉定</li>
+                  <li>上海</li>
+                  <li>北京</li>
+                  <li>京东</li>
+                  <li>嘉定</li>
+                  <li>上海</li>
+                  <li>北京</li>
+                  <li>京东</li>
+                  <li>嘉定</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+      </div>
+  </div>
+<header class="am-topbar admin-header" id="header">
+    <div class="am-g">
+      <div class="am-u-sm-4">
+         <div class="am-topbar-brand " onclick="history.go(-1)">
+           <strong class="am-icon-chevron-left"></strong>
+         </div>
+      </div>
+      <div class="am-u-sm-4">
+        <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+          平台发布
+        </div>
+      </div>
+      <div class="am-u-sm-4">
+       &nbsp
+      </div>
+    </div>
+  </header>
+<!-- <div id="main" onload="gyh()" style="overflow: hidden;">
+  <img src="../image/624669377848171458.png" alt="" >
+</div> -->
+
+
+<!-- 必填项 -->
+
+<div action="" id="form" style="overflow: auto" style="height: 300px" class="am-form">
+    <ul class="am-list am-list-static am-list-border">
+      <li tapmode="">
+        <div class="am-g am-g-collapse">
+          <div class="am-u-sm-4 " style="text-align: left;white-space: nowrap;"> 
+            <i class="am-icon-edit"></i>
+            发布内容：
+          </div>
+          <div class="am-u-sm-6" onclick="changexuanze()">
+            <select data-am-selected="{btnWidth:'100%','btnSize':'xs'}" id="sele" >
+                <option value="0" selected >出口</option>
+                <option value="1" >进口</option>
+                <option value="2" >外发</option>
+                <option value="2" >拼箱</option>  
+            </select>
+          </div>  
+
+       
+        </div>
+       </li>
+   
+    </ul>
+    <ul class="am-list am-list-static am-list-border" style="position: relative;">
+      <li style="padding-bottom: 4px">
+         <div class="am-g am-g-collapse">
+           <div class="am-u-sm-6" >
+            <label for="doc-ipt-3" class="am-u-sm-4 am-form-label"><small class="gygreen">提柜港</small></label>
+            <div class="am-u-sm-8">
+              <select  data-am-selected={btnWidth:'100%','btnSize':'xs'}>
+                 <option value="a">上海港</option>
+                <option value="b">连云港</option>
+              </select>
+            </div>
+               
+            
+           </div>
+           <div class="am-u-sm-6">
+             <label for="doc-ipt-3" class="am-u-sm-4 am-form-label"><small class="gyred">还柜港</small></label>
+            <div class="am-u-sm-8">
+              <select  data-am-selected={btnWidth:'100%','btnSize':'xs'}>
+                <option value="a">上海港</option>
+                <option value="b">连云港</option>
+              </select>
+            
+           </div>
+         </div> 
+      </li>
+      <li>
+         <div class="am-form-icon">
+            <i class="am-icon-map-marker am-icon-fw gygreen"></i>
+            <input type="text" class="am-form-field am-input-sm" placeholder="请填写装卸地址">
+          </div>
+
+      </li>
+      <li>
+        <div class="am-g am-g-collapse" >
+          <div class="am-u-sm-4" style="text-align: left;white-space:nowrap"> 
+            <i class="am-icon-clock-o gyorgecolor"></i>
+            预约时间：
+          </div>
+          <div class="am-u-sm-8">
+            <div class="am-u-sm-7">
+              <form action="" class="am-form" data-am-validator>
+                <input type="text" class="am-form-field am-input-sm" placeholder="立即" data-am-datepicker readonly required  />                    
+              </form>
+            </div>
+            <div class="am-u-sm-5">
+              <select  data-am-selected={btnWidth:'100%',btnSize:'sm'}>
+                <option value="a" >早班</option>
+                <option value="b">中班</option>
+                <option value="o">晚班</option>
+                <option value="m" selected="">不限</option>
+              </select>
+            </div>
+          </div>
+        </div>
+       </li> 
+       <li>
+         <div class="am-g am-g-collapse" >
+          <div class="am-u-sm-4" style="text-align: left;white-space:nowrap"> 
+            <i class="am-icon-tell gyorgecolor"></i>
+            联系电话：
+          </div>
+          <div class="am-u-sm-8">
+           
+              <form action="" class="am-form" data-am-validator>
+                <input type="text" class="am-form-field am-input-sm" placeholder="19765353662"  /> 
+                 <!-- 电话默认：注册手机号     -->              
+              </form>
+          </div>
+        </div>
+       </li>
+    </ul>
+    <ul class="am-list am-list-static am-list-border" id="shuliang">
+      <li>
+        <div class="am-g am-g-collapse">
+            <div class="am-u-sm-4" style="text-align: left;"><span class="am-icon-home">&nbsp</span>箱东:</div>
+            <div class="am-u-sm-8" >
+             
+              <select data-am-selected="{btnWidth:'100%','btnSize':'sm',}">
+                  <option value="0">箱东1</option>
+                  <option value="0">箱东1</option>
+                  <option value="0">箱东1</option>
+                  <!-- 需后台数据维护 -->
+              </select>
+        
+            </div>
+          </div>
+            
+      </li>
+      <li>
+        <div class="am-g am-g-collapse">
+          <div class="am-u-sm-4" style="text-align: left;">箱型选择:</div>
+          <div class="am-u-sm-8" id="choosexiangxing">
+              <div class="am-u-sm-6 " >
+                  <select data-am-selected="{btnWidth:'100%',btnSize:'sm'}" style="color: #333">
+                    <option value="a">20'</option>
+                    <option value="a">40'</option>
+                    <option value="a">45'</option>
+                  </select>
+              </div>
+             
+              <div class="am-u-sm-6" onclick="">
+               <select data-am-selected="{btnWidth:'100%',btnSize:'sm'}" style="color: #333">
+                <option value="a" selected="">HT</option>
+                <!-- 此处option需做后台维护目前有（GP,HC,RF,HT,OT，其他） -->
+              </select>
+              </div>
+          </div>
+        </div>
+      </li>
+      <li id="er">
+        <div class="am-g">
+          <div class="am-u-sm-4" style="text-align: left;">用箱数量:</div>
+          <div class="am-u-sm-8">
+            <div class="am-u-sm-4" >
+              &nbsp
+            </div>
+            <div class="am-u-sm-2 gy-fangkuai" onclick="gyjian(1)">
+              <span class="am-icon-caret-left"><strong></strong></span>
+            </div>
+            <div class="am-u-sm-4">
+              <span  ><strong id="yongxiang">1</strong></span>
+            </div>
+            <div class="am-u-sm-2 gy-fangkuai" onclick="gyzengjia(1)">
+              <span class="am-icon-caret-right"><strong></strong></span>
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+    <ul class="am-list am-list-static am-list-border">
+      
+    </ul>
+
+    <!-- 非必填项 -->
+     <ul class="am-list am-list-static am-list-border">
+      <li>
+        <div class="am-form-group">
+          <textarea class="" rows="4" id="doc-ta-1" placeholder="特殊描述"></textarea>
+        </div>
+       </li> 
+    </ul>
+
+
+</div>
+<footer id='footer'>
+  <p class="gy-padding" onclick="alert('发布成功，报价中');window.location.href='./orderdetail.html'"><button type="button" class="am-btn-sm am-btn am-btn-primary am-btn-block " id="gyfabu">立即发布</button>
+</p>
+</footer>
+<script src="../css/assets/js/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+    $(function(){
+       $('#timeSelectors').innerHTML="立即";
+    })
+
+      var liAry=document.getElementById("shuliang").getElementsByTagName("li");    
+      var a=1; 
+      var b=1;
+      function gyzengjia(j){
+      
+        if(j==0){
+          ++a;
+           $("#yongcheshuliang").html(a);
+        }else{
+          ++b
+          $("#yongxiang").html(b);
+        }
+      }
+
+      function gyjian(j){
+      
+        if(j==0){
+          if(a>0){ --a;
+           $("#yongcheshuliang").html(a);}
+         
+        }else{
+          if(b>0){--b
+          $("#yongxiang").html(b);}  
+        }
+      }
+
+</script>
+<!--<![endif]-->
+<script src="../css/assets/js/amazeui.min.js"></script>
+<!-- <script src="../css/assets/js/app.js"></script> -->
+</body>
+</html>

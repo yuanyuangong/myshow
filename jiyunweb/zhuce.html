@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>集装箱调运</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <style>
+    .get {
+      background: #1E5B94;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .get-title {
+      font-size: 200%;
+      border: 2px solid #fff;
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .get-btn {
+      background: #fff;
+    }
+
+    .detail {
+      background: #fff;
+    }
+
+    .detail-h2 {
+      text-align: center;
+      font-size: 150%;
+      margin: 40px 0;
+    }
+
+    .detail-h3 {
+      color: #1f8dd6;
+    }
+
+    .detail-p {
+      color: #7f8c8d;
+    }
+
+    .detail-mb {
+      margin-bottom: 30px;
+    }
+
+    .hope {
+      background: #0bb59b;
+      padding: 50px 0;
+    }
+
+    .hope-img {
+      text-align: center;
+    }
+
+    .hope-hr {
+      border-color: #149C88;
+    }
+
+    .hope-title {
+      font-size: 140%;
+    }
+
+    .about {
+      background: #fff;
+      padding: 40px 0;
+      color: #7f8c8d;
+    }
+
+    .about-color {
+      color: #34495e;
+    }
+
+    .about-title {
+      font-size: 180%;
+      padding: 30px 0 50px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #7f8c8d;
+      margin: 0;
+      padding: 15px 0;
+      text-align: center;
+      background: #2d3e50;
+    }
+    .gy-background-color{
+      background-color: #fe8800;
+      color: #fff
+    } 
+    .gy-on:hover{
+      box-shadow: 4px 4px 4px #ccc;
+      background-color: #fff;
+    }
+    .gy-border{
+      border: none;
+    }
+    .gy-active>a{
+      color:#fe8800;
+    }
+    .gy-banner{
+     
+      background-size:100%;
+    }
+    .get-btn{background-color: #fe8800;color: #fff}
+    header > li {color-size:12px;}
+    .detail .am-u-sm-6{
+      padding:0px 16px;
+    }
+    .detail .am-g{
+      padding:36px 16px;
+    }
+        .am-popup-bd li{
+      padding: 8px;line-height: 32px
+    }
+    .gyborderall{
+      border: 1px solid #ccc;padding-top: 8px;padding-bottom: 8px;border-radius: 4px
+    }
+    .yuan{
+      font-size: 14px;
+      border-radius: 8px;
+      background-color: #ccc;
+      color: #fff;
+      line-height: 48px
+    }
+    .yuans{
+      color: #fea53c;
+      line-height: 48px
+    }
+    .jiantou{
+      padding-top: 4px;
+      padding-bottom: 4px;
+      color: #fea53c
+    }
+    .wenzi li{
+      padding-bottom: 8px
+    }
+    .divu{
+      padding: 16px;
+      background-color: #fff;
+      color: #666;
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+  <div class="am-topbar-brand dingbu" style="cursor: pointer;" onclick="window.location.href='./index.html'">
+    <strong data-am-smooth-scroll > <img src="./image/jzx.png" alt="" height="20">&nbsp集装箱调运</strong> 
+  </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head" style="float: right;">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class=""><a href="./index.html">首页</a></li>
+        <li class="zhongbu navs " data-am-dropdown><a href="./gonggao.html">集运宝盒™公告 </a></li>
+        <li class=" zhongbu navs"><a href="./about.html">关于罗济</a></li>
+        <!-- <li class="am-dropdown" data-am-dropdown>
+          <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+            关于罗济 <span class="am-icon-caret-down"></span>
+          </a>
+          <ul class="am-dropdown-content">
+           
+              <li class=" zhongbu navs"><a href="./about.html"class="dibu">关于我们</a></li>
+              <li class="  zhongbu navs"><a href="./lianxi.html">联系我们</a></li>
+          </ul>
+        </li> -->
+        <li class=" zhongbu navs am-active"><a href="./zhuce.html">APP下载</a></li>
+        <li class=" zhongbu navs"><a href="./circle .html">跨境物流圈</a></li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="get gy-banner" style="padding: 0;border-bottom: 1px solid #ccc">
+ <div class="hope" style="background: url('./image/index02.png') no-repeat;background-size:100% ">
+  <div class="am-g am-container" >
+    <div class="am-u-lg-4 am-u-md-6 am-u-sm-12 hope-img" style="overflow: hidden;border: 1px solid #fff;padding-top: 8px;background-color: #fff;border-radius: 6px">
+      
+      <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+        <ul class="am-slides">
+          <li><img src="./image/index1.png" /></li>
+          <li><img src="./image/index2.png" /></li>
+          <li><img src="./image/index3.png" /></li>
+        </ul>
+      </div>
+
+      <hr class="am-article-divider am-show-sm-only hope-hr">
+    </div>
+    <div class="am-u-lg-8 am-u-md-6 am-u-sm-12" style="color: #f0f0f0">
+      <h2 class="hope-title" >同我们一起创建集装箱调运新方式</h2>
+      <p>
+        致力于提升物流效率、减少无谓劳动减少车辆空驶，降低大型城市地面交通压力让物流链参与方有更多时间陪伴家人
+      </p> 
+
+      <p style="text-align: center;width: 100%;padding:32px ">
+          <img src="./image/gy-erweima.png" alt="" height="">
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="detail">
+  <div class="am-g am-container">
+    <div class="am-g">
+      <div class="am-u-sm-6" style="border-right:1px solid #ccc ">
+        <div class="am-u-sm-4"> <div style="width: 100%;border: 1px solid #ccc;border-radius: 6px;height:140px;padding:20%; "><img src="./image/youjiang.png" alt="" height="100%"></div></div>
+        <div class="am-u-sm-8"><h3>注册就送大礼</h3><small>注册即送积分，循环积分计划</small></div>
+      </div>
+      <div class="am-u-sm-6">
+         <div class="am-u-sm-4"> <div style="width: 100%;border: 1px solid #ccc;border-radius: 6px;height:140px; padding:20%;"><img src="./image/youjiang-1.png" alt="" height="90%"></div></div>
+        <div class="am-u-sm-8"><h3>邀请好友就有奖励</h3><small>邀请即送积分，推广越多 获利越多</small>
+          <br>
+          <hr>
+          <button type="button" class="am-btn am-btn-danger" data-am-modal="{target: '#my-popup'}">
+            <small>查看返利教程</small>
+          </button>
+        <!-- 返利教程 -->
+          <div class="am-popup" id="my-popup">
+            <div class="am-popup-inner">
+              <div class="am-popup-hd">
+                <h4 class="am-popup-title">返利教程</h4>
+                <span data-am-modal-close
+                      class="am-close">&times;</span>
+              </div>
+              <div class="am-popup-bd">
+               <section>
+
+                 <img src="./image/back.png" alt="" width="100%">
+                  <div class="am-g" style="padding: 16px;background-color: #fff">
+                   
+                        <h2 style="padding-left:8px;color: #666;border-left: 4px solid #fea53c">返利简介:</h2>
+                    <small>
+                     即日起，<span style="color: #fea53c">分享连接给您的朋友</span>分享连接给您的朋友，当他们完成接收以及注册，您都可以获得奖励，此后，他们每完成一单业务，您都能<span style="color: #fea53c">获得10%的返利</span>，你推荐的好友下面的好友也同样可以为你提供返利。
+                    </small>
+                     <h2 style="padding-left:8px;color: #666;border-left: 4px solid #fea53c">参与流程:</h2>
+                      
+                    <div class="am-g" style="padding: 0 32px;font-size: 12px;text-align: center;color: #666">
+                      <div class="am-u-sm-5 gyborderall">进入客服端<br>“返利活动”</div>
+                      <div class="am-u-sm-2"><span class="yuan">或</span></div>
+                      <div class="am-u-sm-5 gyborderall">进入他人的推荐链接</div>
+                      <div class="am-u-sm-5 jiantou"><span class="am-icon-arrow-down"></span></div>
+                      <div class="am-u-sm-2">&nbsp</div>
+                      <div class="am-u-sm-5 jiantou"><span class="am-icon-arrow-down"></span></div>
+                      <div class="am-u-sm-12 gyborderall">获得优惠链接</div>
+
+                      <div class="am-u-sm-5 jiantou"><span class="am-icon-arrow-down"></span></div>
+                      <div class="am-u-sm-2 jiantou">&nbsp</div>
+                      <div class="am-u-sm-5 jiantou">&nbsp</div>
+
+                      <div class="am-u-sm-5 gyborderall">推荐给您的朋友</div>
+                      <div class="am-u-sm-2"><span class="am-icon-arrow-right yuans"></span></div>
+                      <div class="am-u-sm-5 gyborderall">朋友推荐给他的朋友</div>
+
+                      
+                      <div class="am-u-sm-5 jiantou"><span class="am-icon-arrow-down"></span></div>
+                      <div class="am-u-sm-2 jiantou">&nbsp</div>
+                      <div class="am-u-sm-5 jiantou"><span class="am-icon-arrow-down"></span></div>
+
+                      <div class="am-u-sm-12 gyborderall">朋友（或朋友的朋友）完成一单业务</div>
+                      <div class="am-u-sm-12 jiantou"><span class="am-icon-arrow-down"></span></div>
+                      <div class="am-u-sm-12 gyborderall">您将获得最高10%返利</div>
+                    </div>
+                  </div>
+                  <div class="am-g" style="padding: 16px;color: #999">
+                    <h2 style="padding-left:8px;color: #666;border-left: 4px solid #fea53c">返利说明:</h2>
+                    <small>
+                      <ul class="wenzi">
+                        <li>您的朋友必须是新用户，返利金额最迟48小时冲入您的账号</li>
+                        <li>您的每日返利次数上限会根据当天的奖池量适时调节</li>
+                        <li>您若获得现金奖励，可以在“个人中心”的“返利聚宝盆”或“资金账户”中查询到吗,余额可以支付运费，提现需要进行实名认证，实名认证需要7个工作日内审核</li>
+                        <li>
+                          拥有相同账户，手机号，微信号，支付账号，设备，银行卡的用户视为同一用户（适用于您的朋友），仅对完成订单进行返利
+                        </li>
+                        <li>
+                          一旦发现任何违法套现返利的行为，将不予返利，追回相关余额或者封停账号，且依法追究其法律责任。
+                        </li>
+                      </ul>
+                    </small>
+                  </div>
+                   
+                  <div class="divu">集装箱调运拥有最终解释权</div>
+                </section>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+<footer class="footer">
+       
+      <p>
+       © 2016 <a href="#" target="_blank">33</a> Licensed under <a
+      href="#" target="_blank">23424</a>. by 上海罗济信息技术有限公司.
+        
+      </p>
+
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+</body>
+</html>

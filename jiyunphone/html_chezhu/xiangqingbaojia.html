@@ -1,0 +1,287 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/app.css"/>
+  <style type="text/css">
+  
+    .gy-padding{
+      padding: 0.5rem 1rem;
+      line-height: 36px;
+    }
+   .am-g{
+      text-align: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+    #main{
+    height: 700px;
+    width: 100%;
+    }
+    #body{
+      overflow: auto;
+    }
+    #header{
+      position:fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background-color: #fff;
+      color: #333;
+    }
+    #section{
+      background-color:#f8f8f8; 
+      padding: 8px 0px;
+      overflow: auto;
+     
+    }
+    #section li{
+      padding: 0.5rem 1rem;
+    }
+   .gygreen{
+    color: #72d350;
+   }
+   .gyred{
+    color: #fc4747;
+   }
+    .gy-fangkuai{
+   
+      background-color: #fea53c;
+      color: #fff;
+    }
+        .am-g{
+      text-align: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    #doc-ta-1{
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+    .gyallheight{
+      line-height: 36px;
+    }
+    .gyborederright{
+      border-right: 1px solid #ccc !important;
+    }
+    .gyfloatright{
+      float: right;
+    }
+    .gyfontnormal{
+      font-size: 1.4rem;
+        color: #010101;
+    }
+    .gyorge{
+      color: #fea53c;
+    }
+ 
+     #footer .am-u-sm-6:hover {
+
+      background-color:#fea53c;
+      color: #fff;
+     }
+    #main{
+   
+    width: 100%;
+    }
+    .gy-padding{
+      padding: 0.5rem 1rem;
+      line-height: 49px;
+    }
+   #form .am-u-sm-4,.am-g{
+    padding: 0;
+    border: none;
+   }
+   #form small{
+   color:  #999;
+   }
+   .gygreen{
+    color: #72d350;
+   }
+   .gyred{
+    color: #fc4747;
+   }
+    .gy-fangkuai{
+   
+      background-color: #fea53c;
+      color: #fff;
+    }
+    .gyborder{
+      border: 1px solid #ccc !important;
+    }
+    .gyactive{
+      background-color: #fea53c;
+      color: #fff;
+    }
+
+    .gypaddingleft li{
+      padding-left: 1rem;
+      padding-right:1rem;
+    }
+    .gyorge{
+      color: #fea53c;
+    }
+
+    #gytable{
+      width:100%; 
+    }
+    #gytable li{
+      border-color: #fea53c;
+    }
+    .am-topbar-brand{
+      padding:0;
+    }
+
+  </style>
+</head>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+<body id="body" onload="gyheight()">
+   <header class="am-topbar admin-header" id="header">
+    <div class="am-g">
+      <div class="am-u-sm-4">
+         <div class="am-topbar-brand " onclick="history.go(-1)">
+           <strong class="am-icon-chevron-left"></strong>
+         </div>
+      </div>
+      <div class="am-u-sm-4">
+        <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+          详情
+        </div>
+      </div>
+      <div class="am-u-sm-4">
+       &nbsp
+      </div>
+    </div>
+  </header>
+
+  
+  <section id="section">
+  <!-- <div id="list">
+    <script id="template" type="text/template"> -->
+    
+
+     <ul class="am-list am-list-static gypaddingleft">
+      <li>
+      <span class="am-icon-user" ></span>
+        刘仙神（187****2551）
+      </li>
+      
+    </ul>   
+    <ul class="am-list am-list-static gypaddingleft">
+     
+      <li>
+        <span class="am-icon-clock-o gygreen" >&nbsp</span><span class="gyfontnormal">预约时间：&nbsp2016/3/24 - 12:24</span><br>
+        
+      </li>
+      <li>
+        <table id="gytable">
+          <tr>
+            <td id="jizhuangxiang">
+              <ul class="am-list am-list-static am-list-border" style="margin-bottom: 4px">
+                <li><span class="am-icon-upload">&nbsp集装箱型：20'GP</li>
+                <li>用箱数：<strong>&nbsp&nbsp4</strong></li>
+              </ul>
+              <small>发布时间：2015/3/24-12:21</small>
+            </td>
+          </tr>
+     
+        </table>
+      </li>
+    </ul>
+    <ul class="am-list am-list-static gypaddingleft">
+      <li>
+        <span class="gygreen ">&nbsp从</span>&nbsp上海港&nbsp<span class="gyred">到</span>&nbsp某港口
+      </li>
+      <li>
+        <span class="am-icon-map-marker" style="color: #fea53c">&nbsp</span>装卸地址：---
+      </li>
+    </ul>
+  
+    <ul class="am-list am-list-static gypaddingleft">
+      <li>
+        <span class="am-icon-bookmark"></span>&nbsp特殊描述
+      </li>
+      <li>
+        <small>
+          箱型还需要40尺，车辆最好是大拖车
+        </small>
+      </li>
+    </ul>
+  
+<!--     </script>
+   
+</div> -->
+
+
+  </section>
+  <!-- 报价输入框 -->
+    <div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt-1">
+      <div class="am-modal-dialog">
+        <div class="am-modal-hd">请输入您的报价金额
+
+         <input type="text" class="am-modal-prompt-input" style="margin: 0;width: 100%">
+
+        </div>
+        <div class="am-modal-bd" style="text-align: left;">
+         
+          <!-- 历史报价 -->
+            
+         
+        </div>
+        <div class="am-modal-footer">
+          <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+          <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+        </div>
+      </div>
+    </div>
+ <footer id="footer">
+
+  <div class="am-g" style="padding: 8px">
+    <div class="am-u-sm-6"><button type="button" class="am-btn am-btn-primary am-btn-block am-btn-sm" id="doc-prompt-toggle-1">报 价</button></div>
+    <div class="am-u-sm-6"> <button type="button" class="am-btn gyactive am-btn-block am-btn-sm" onclick="alert('拨打电话')">联系他</button></div>
+  </div>
+    
+  
+
+</footer>
+<!-- content start -->
+<script src="../css/assets/js/jquery.min.js"></script>
+
+<!--<![endif]-->
+<script src="../css/assets/js/amazeui.min.js"></script>
+
+<script type="text/javascript">
+// 
+$(function(){
+   $('#doc-prompt-toggle-1').on('click', function() {
+        $('#my-prompt-1').modal({
+          relatedTarget: this,
+          onConfirm: function(e) {
+            alert('报价成功' + e.data || '')
+          },
+          onCancel: function(e) {
+            
+          }
+        });
+      });
+})
+
+</script>
+</body>
+</html>

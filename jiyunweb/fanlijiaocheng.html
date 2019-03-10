@@ -1,0 +1,154 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="./assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="./assets/css/admin.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <style type="text/css">
+
+    #header{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .am-topbar-brand{
+      padding:0;
+    }
+    .am-popup-bd li{
+      padding: 8px;line-height: 32px
+    }
+    .gyborderall{
+      border: 1px solid #ccc;padding-top: 8px;padding-bottom: 8px;border-radius: 4px
+    }
+    .yuan{
+      font-size: 14px;
+      border-radius: 8px;
+      background-color: #ccc;
+      color: #fff;
+      line-height: 48px
+    }
+    .yuans{
+      color: #fea53c;
+      line-height: 48px
+    }
+    .jiantou{
+      padding-top: 4px;
+      padding-bottom: 4px;
+      color: #fea53c
+    }
+    .wenzi li{
+      padding-bottom: 8px
+    }
+    .divu{
+      padding: 16px;
+      background-color: #fff;
+      color: #666;
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+<body id="body" >
+<header class="am-topbar admin-header" id="header">
+<div class="am-g">
+  <div class="am-u-sm-3">
+     <div class="am-topbar-brand " onclick="history.go(-1)">
+       <strong class="am-icon-chevron-left"></strong>
+     </div>
+  </div>
+  <div class="am-u-sm-6">
+    <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+      返利教程
+    </div>
+  </div>
+  <div class="am-u-sm-3">
+    <div class="am-topbar-brand gyfloatright" >
+      <a href="./mainwin.html"><small id="bianji">关闭</small></a>
+    </div>
+  </div>
+</div>
+ 
+</header>
+<!-- <header class="am-topbar admin-header" id="header">
+  <div class="am-topbar-brand " onclick="history.go(-1)">
+    <strong class="am-icon-chevron-left"></strong> <span>个人资料&nbsp</span>
+  </div>
+  
+</header> -->
+<section style="margin-top: 50px">
+
+ <img src="../image/back.png" alt="" width="100%">
+  <div class="am-g" style="padding: 16px;background-color: #fff">
+   
+        <h2 style="padding-left:8px;color: #666;border-left: 4px solid #fea53c">返利简介:</h2>
+    <small>
+     即日起，<span style="color: #fea53c">分享连接给您的朋友</span>分享连接给您的朋友，当他们完成接收以及注册，您都可以获得奖励，此后，他们每完成一单业务，您都能<span style="color: #fea53c">获得10%的返利</span>，你推荐的好友下面的好友也同样可以为你提供返利。
+    </small>
+     <h2 style="padding-left:8px;color: #666;border-left: 4px solid #fea53c">参与流程:</h2>
+      
+    <div class="am-g" style="padding: 0 32px;font-size: 12px;text-align: center;color: #666">
+      <div class="am-u-sm-5 gyborderall">进入客服端<br>“返利活动”</div>
+      <div class="am-u-sm-2"><span class="yuan">或</span></div>
+      <div class="am-u-sm-5 gyborderall">进入他人的推荐链接</div>
+      <div class="am-u-sm-5 jiantou"><span class="am-icon-arrow-down"></span></div>
+      <div class="am-u-sm-2">&nbsp</div>
+      <div class="am-u-sm-5 jiantou"><span class="am-icon-arrow-down"></span></div>
+      <div class="am-u-sm-12 gyborderall">获得优惠链接</div>
+
+      <div class="am-u-sm-5 jiantou"><span class="am-icon-arrow-down"></span></div>
+      <div class="am-u-sm-2 jiantou">&nbsp</div>
+      <div class="am-u-sm-5 jiantou">&nbsp</div>
+
+      <div class="am-u-sm-5 gyborderall">推荐给您的朋友</div>
+      <div class="am-u-sm-2"><span class="am-icon-arrow-right yuans"></span></div>
+      <div class="am-u-sm-5 gyborderall">朋友推荐给他的朋友</div>
+
+      
+      <div class="am-u-sm-5 jiantou"><span class="am-icon-arrow-down"></span></div>
+      <div class="am-u-sm-2 jiantou">&nbsp</div>
+      <div class="am-u-sm-5 jiantou"><span class="am-icon-arrow-down"></span></div>
+
+      <div class="am-u-sm-12 gyborderall">朋友（或朋友的朋友）完成一单业务</div>
+      <div class="am-u-sm-12 jiantou"><span class="am-icon-arrow-down"></span></div>
+      <div class="am-u-sm-12 gyborderall">您将获得最高10%返利</div>
+    </div>
+  </div>
+  <div class="am-g" style="padding: 16px;color: #999">
+    <h2 style="padding-left:8px;color: #666;border-left: 4px solid #fea53c">返利说明:</h2>
+    <small>
+      <ul class="wenzi">
+        <li>您的朋友必须是新用户，返利金额最迟48小时冲入您的账号</li>
+        <li>您的每日返利次数上限会根据当天的奖池量适时调节</li>
+        <li>您若获得现金奖励，可以在“个人中心”的“返利聚宝盆”或“资金账户”中查询到吗,余额可以支付运费，提现需要进行实名认证，实名认证需要7个工作日内审核</li>
+        <li>
+          拥有相同账户，手机号，微信号，支付账号，设备，银行卡的用户视为同一用户（适用于您的朋友），仅对完成订单进行返利
+        </li>
+        <li>
+          一旦发现任何违法套现返利的行为，将不予返利，追回相关余额或者封停账号，且依法追究其法律责任。
+        </li>
+      </ul>
+    </small>
+  </div>
+   
+  <div class="divu">集装箱调运拥有最终解释权</div>
+</section>
+</script>
+</body>
+</html>

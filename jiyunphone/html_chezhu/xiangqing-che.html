@@ -1,0 +1,197 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../css/assets/css/admin.css">
+  <link rel="stylesheet" href="../css/assets/css/app.css">
+  <style type="text/css">
+     #header{
+      position:fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      text-align: center;
+      background-color: #fff;
+      color: #333;
+    }
+    section li{
+      padding: 0.5rem 1rem;
+    }
+    .gyallheight{
+      line-height: 36px;
+    }
+    .gyborederright{
+      border-right: 1px solid #ccc !important;
+    }
+    .gyfloatright{
+      float: right;
+    }
+    .gyfontnormal{
+      font-size: 1.4rem;
+        color: #010101;
+    }
+
+    .gy-padding{
+      padding: 0.5rem 1rem;
+      line-height: 49px;
+    }
+    #touxiang{
+      background-color:#f8f8f8;
+      border-radius: 3px;      width:  34px;
+      height: 34px;
+      float: left;
+    }
+    .gypaddingleft li{
+      padding-left: 1rem;
+      padding-right:1rem;
+    }
+    .gyorge{
+      color: #fea53c;
+    }
+
+    #gytable{
+      width:100%; 
+    }
+    #che{
+    padding-right:3px;
+    }
+    #jizhuangxiang{
+    padding-left:3px;
+    }
+    .gyfloatright{
+    text-align:right;
+    float: right;
+    }
+   .gyblack{
+      color: #333;
+    }
+    .gyzidingyi{
+      margin: 0;
+      line-height: 1.2rem;
+     
+    }
+
+  #gytable li{
+    border-color: #fea53c;
+  }
+  
+  .am-topbar-brand{
+      padding:0;
+    }
+  </style>
+</head>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+<body id="body" >
+   <header class="am-topbar admin-header" id="header">
+    <div class="am-g">
+      <div class="am-u-sm-4">
+         <div class="am-topbar-brand " onclick="history.go(-1)">
+           <strong class="am-icon-chevron-left"></strong>
+         </div>
+      </div>
+      <div class="am-u-sm-4">
+        <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+          详情
+        </div>
+      </div>
+      <div class="am-u-sm-4">
+       &nbsp
+      </div>
+    </div>
+  </header>
+  <div style="height: 50px "></div>
+  
+  <section>
+  <!-- <div id="list">
+    <script id="template" type="text/template"> -->
+    
+
+   <ul class="am-list am-list-static gypaddingleft">
+    <li>
+      <div id="touxiang"><img src="../image/log.png" alt=""height="34"></div>
+ 
+
+      <div style="float: left;">&nbsp刘仙神（187****2551） <br><small class="" style="color: #666">&nbsp上海宝盒集装箱公司</small></div>
+      <div style="clear: both;"></div>
+    </li>
+    <li>
+        <table id="gytable">
+          <tr>
+            <td id="che">
+              <ul class="am-list am-list-static am-list-border" style="margin-bottom: 8px">
+                <li style="padding-bottom: 4px"><span class="am-icon-home"></span>&nbsp箱东</li>
+                <li style="padding-top: 4px">箱东甲</li>
+              </ul>
+
+            </td>
+            <td id="jizhuangxiang">
+              <ul class="am-list am-list-static am-list-border" style="margin-bottom: 8px">
+                <li style="padding-bottom: 4px">
+                <span class="am-icon-upload">&nbsp集装箱</li>
+                <li style="padding-top: 4px">20'GP</li>
+               </ul>   
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><small class="am-icon-clock-o" style="line-height: 20px">&nbsp发运时间：2015/3/24-12:21</small></td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+    <ul class="am-list am-list-static gypaddingleft">
+      <li>
+        <span class="gygreen ">&nbsp从</span>&nbsp上海港&nbsp<span class="gyred">到</span>&nbsp某港口
+      </li>
+      <li>
+        <span class="am-icon-map-marker" style="color: #fea53c">&nbsp</span>发车地址：---
+      </li>
+    </ul>
+  
+    <ul class="am-list am-list-static gypaddingleft">
+      <li>
+        <span class="am-icon-bookmark"></span>&nbsp特殊描述
+      </li>
+      <li>
+        <small>
+          只送上海港
+        </small>
+      </li>
+    </ul>
+
+  </section>
+  
+ <footer id="footer">
+
+  <div class="am-g" style="padding: 8px">
+    <div class="am-u-sm-12">
+      <button type="button" class="am-btn gyactive am-btn-block am-btn-sm" onclick="alert('联系对方')">联系他</button>
+    </div>
+  </div>
+    
+   
+
+</footer>
+<!-- content start -->
+<script src="../css/assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

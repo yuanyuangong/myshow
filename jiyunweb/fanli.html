@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="JIZHUANGXIANG" />
+  <link rel="stylesheet" href="./assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="./assets/css/admin.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <style type="text/css">
+    .am-topbar-brand{
+      padding:0;
+    }
+    .yuan{
+      width: 100%;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-radius:16px;
+      padding: 8px
+    }
+    .xiaotishi{
+    background-color: #fea53c;color: #fff;
+    }
+    .am-btn-group label{
+      width: 50%;
+    }
+    .youren li{
+      padding-left: 8px
+    }
+  </style>
+
+</head>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+
+<body id="body" >
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+  <div class="am-topbar-brand dingbu" style="cursor: pointer;" onclick="window.location.href='./index.html'">
+    <strong data-am-smooth-scroll > <img src="./image/jzx.png" alt="" height="20">&nbsp集装箱调运</strong> 
+  </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head" style="float: right;">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class=""><a href="#">首页</a></li>
+        <li class="zhongbu navs " data-am-dropdown><a href="./gonggao.html">集运宝盒™公告 </a></li>
+        <li class=" zhongbu navs"><a href="./about.html">关于罗济</a></li>
+        <!-- <li class="am-dropdown" data-am-dropdown>
+          <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+            关于罗济 <span class="am-icon-caret-down"></span>
+          </a>
+          <ul class="am-dropdown-content">
+           
+              <li class=" zhongbu navs"><a href="./about.html"class="dibu">关于我们</a></li>
+              <li class="  zhongbu navs"><a href="./lianxi.html">联系我们</a></li>
+          </ul>
+        </li> -->
+        <li class=" zhongbu navs"><a href="./zhuce.html"class="dibu">APP下载</a></li>
+        <li class=" zhongbu navs am-active"><a href="./circle .html"class="dibu">跨境物流圈</a></li>
+
+      </ul>
+
+     
+    </div>
+  </div>
+</header>
+
+
+<div class="am-popup" id="my-popup">
+    <div class="am-popup-inner">
+      <div class="am-popup-hd">
+        <h4 class="am-popup-title">我的推荐</h4>
+        <span data-am-modal-close
+              class="am-close">&times;</span>
+      </div>
+      <!-- 选择 -->
+      <div class="am-g" style="background-color: #f8f8f8;">
+        <div class="am-btn-group doc-js-btn-1" data-am-button style="width: 100%">
+          <label class="am-btn gyactive" name="la">
+            <input type="radio" name="options" value="1" id="option1"> 已推荐
+          </label>
+          <label class="am-btn" name="la">
+            <input type="radio" name="options" value="2" id="option2"> 未推荐
+          </label>
+        </div>
+      </div>
+    
+   
+      
+     <!-- 未推荐 -->
+      <ul class="am-list am-list-static youren" id="list">
+       
+
+
+      </ul>
+      
+    </div>
+  
+</div>
+ <img src="./image/index4.jpg" alt="" width="100%">
+<div class="am-container">
+<section id="">
+ 
+  <div style="margin: 8;text-align: center;width: 100%;color: #999"><small>
+  <a href="./fanlijiaocheng.html">查看返利教程</a></small></div>
+  <div class="am-g" style="background-color: #fff;padding: 16px">
+    <p style="padding: 0 8px;text-align: center;">
+      <small>推送给朋友，朋友注册，将获取100蓝钻，好友交易支付时</small>
+      <br>
+      <strong style="font-size: 1.8rem">您将获取10%的返利<br></strong>
+      <small style="color: #fea53c">你同样可以获取好友的好友交易支付的返利</small>
+           
+    </p>
+  </div>
+  <div class="am-g"style="padding-top: 16px">
+    <div class="am-u-sm-6">
+      <div class="yuan" style="border-color:#72d350 ">
+        <strong>0</strong>人<br>
+        <small>已成功推荐</small>
+      </div>
+    </div>
+    <div class="am-u-sm-6">
+      <div class="yuan" style="border-color:#fc4747 ">
+        <strong>0</strong>元<br>
+        <small>累计获益</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="am-g" style="padding: 8px;padding-top: 32px">
+    <button class="am-btn am-btn-block " style="border-radius:3px; background-color: #fea53c;color: #fff" onclick="window.location.href='./zhuce.html'">立即推送</button>
+  </div>
+
+</section>
+</div>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/amazeui.min.js"></script>
+
+<!-- <script src="../script/api.js"></script> -->
+<!--<![endif]-->
+
+</body>
+</html>

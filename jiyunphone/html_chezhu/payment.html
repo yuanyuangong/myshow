@@ -1,0 +1,137 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集装箱调运</title>
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../css/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../css/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../css/assets/css/amazeui.min.css"/>
+  <!-- <link rel="stylesheet" href="../css/assets/css/amazeui.chosen.css"/> -->
+  <link rel="stylesheet" href="../css/assets/css/admin.css">
+  <link rel="stylesheet" href="../css/assets/css/app.css">
+
+  <style type="text/css">
+    #header{
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+    footer{
+      position: fixed;
+      bottom: 0;
+      width:100%;
+    }
+    .am-topbar-brand{
+      padding:0;
+    }
+    #bluediamond {
+      width: 100%;
+      border:1px solid #ccc;
+      padding-left: 8px;
+    }
+  </style>
+  <script src="../css/assets/js/jquery.min.js"></script>
+  <script src="../css/assets/js/amazeui.min.js"></script>
+</head>
+
+<body id="body" >
+  <header class="am-topbar admin-header" id="header">
+    <div class="am-g">
+      <div class="am-u-sm-2">
+         <div class="am-topbar-brand " onclick="history.go(-1)">
+           <strong class="am-icon-chevron-left"></strong>
+         </div>
+      </div>
+      <div class="am-u-sm-8">
+        <div class="am-topbar-brand" style="width: 100%;text-align: center;">
+          支付确认
+        </div>
+      </div>
+      <div class="am-u-sm-2" style="text-align: right;">
+        <span class=""></span>
+      </div>
+    </div>
+  </header>
+  <div style="height:  50px"></div>
+  <div id="list" >
+
+ <!--    <script id="template" type="text/template">
+      {{~ it:data }} -->
+<!-- 正在报价 -->
+    <ul class="am-list am-list-static am-list-border" >
+        
+        <li>
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-6 " ><span class="am-icon-shirtsinbulk" style="color: #fea53c">&nbsp</span>平台特惠报价</div>
+            <div class="am-u-sm-6"><span class="gyred">￥1200</span></div>
+          </div>
+        </li>
+         <li>
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-8" >余额：&nbsp￥2400</div>
+            <div class="am-u-sm-4" style="text-align: right;"><a href="./zijin.html"><small>点击充值</small></a></div>
+          </div>
+        </li>
+        <li>
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-4" style="white-space:nowrap;  " ><span class="am-icon-plus-square"></span>&nbsp还需支付：</div>
+            <div class="am-u-sm-4" style="color: #fea53c;">￥1200</div>
+            <div class="am-u-sm-4" >
+              
+              <select data-am-selected={'btnWidth':'100%','btnSize':'sm'}>
+                <option value="0">支付宝</option>
+                <option value="1">微信</option> 
+                <option value="2" selected>支付方式</option> 
+              </select>
+
+            </div>
+          </div>
+        </li>
+    </ul>
+
+    <ul class="am-list am-list-static am-list-border">
+       <li>
+          <div class="am-g am-g-collapse" onclick="window.location.href='./fapiao.html'">
+            <div class="am-u-sm-4" >发票信息</div>
+            <div class="am-u-sm-8" style="text-align: right;color: #999">
+              <small>上海歌德商贸有限公司</small>&nbsp<span class="am-icon-angle-right am-icon-sm"></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="am-g am-g-collapse">
+            <div class="am-u-sm-4" style="white-space:nowrap;" >蓝钻抵扣：</div>
+            <div class="am-u-sm-4" style="color: #0e90d2;"><input type="text" id="bluediamond" placeholder="0"></div>
+            <div class="am-u-sm-4" style="text-align: right;">
+              <small>共<span style ="color:#0e90d2">2000</span>个</small>
+            </div>
+          </div>
+        </li>
+    </ul>
+ <!--   {{~}}
+
+    </script> -->
+  </div>
+<footer>
+  
+  <div class="am-u-g" style="padding:8px">
+    <div class="am-u-sm-12">
+      <button type="button" class="am-btn am-btn-block gyactive" onclick="alert('暂时无需密码，即可支付'),window.location.href='./orderdetail-confirm.html'">
+        立即支付
+      </button>   
+    </div>
+  </div>
+</footer>
+<!-- content start -->
+
+
+
+</body>
+</html>
