@@ -1,5 +1,32 @@
 var jsondata=[
-
+	{	theme:'youyou',
+		imgurl:'images/youyou/1.png',
+		datatype:'websites',
+		title:"友游戏",
+		pl:"转独立手机游戏发布提供渠道",
+		leg:9
+	},
+	{	theme:'youweb',
+		imgurl:'images/youweb/1.png',
+		datatype:'websites',
+		title:"友游戏web",
+		pl:"转独立手机游戏发布提供渠道",
+		leg:7
+	},
+	{	theme:'miyou',
+		imgurl:'images/miyou/1.png',
+		datatype:'logos',
+		title:"觅友戏",
+		pl:"寻找朋友玩新游戏",
+		leg:5
+	},
+	{	theme:'oter',
+		imgurl:'images/oter/6.png',
+		datatype:'photos',
+		title:"各种设计",
+		pl:"showTime",
+		leg:8
+	},
 	{
 		imgurl:'images/wuliu/1.png',
 		theme:'wuliu',
@@ -29,34 +56,7 @@ var jsondata=[
 		pl:"邮轮票务，以及邮轮物资供应信息管理系统",
 		leg:3
 	},
-	{	theme:'youyou',
-		imgurl:'images/youyou/1.png',
-		datatype:'websites',
-		title:"友游戏",
-		pl:"转独立手机游戏发布提供渠道",
-		leg:9
-	},
-	{	theme:'youweb',
-		imgurl:'images/youweb/1.png',
-		datatype:'websites',
-		title:"友游戏web",
-		pl:"转独立手机游戏发布提供渠道",
-		leg:7
-	},
-	{	theme:'miyou',
-		imgurl:'images/miyou/1.png',
-		datatype:'logos',
-		title:"觅友戏",
-		pl:"寻找朋友玩新游戏",
-		leg:5
-	},
-	{	theme:'oter',
-		imgurl:'images/oter/6.png',
-		datatype:'photos',
-		title:"各种设计",
-		pl:"showTime",
-		leg:8
-	},
+	
 ]
 function int(){
 	for(var i=0;i<jsondata.length;i++){
