@@ -1,4 +1,18 @@
 var jsondata=[
+	{	theme:'xiuxian',
+		imgurl:'images/xiuxian/0.png',
+		datatype:'paint',
+		title:"游戏策划《修无尽》",
+		pl:"修仙放置类游戏，自由组合技能独创功法，平行世界设定，单机变联机",
+		leg:9
+	},
+	{	theme:'paint',
+		imgurl:'images/paint/4.png',
+		datatype:'paint',
+		title:"绘画",
+		pl:"插画创造之路",
+		leg:4
+	},
 	{	theme:'youyou',
 		imgurl:'images/youyou/1.png',
 		datatype:'websites',
@@ -27,6 +41,7 @@ var jsondata=[
 		pl:"showTime",
 		leg:8
 	},
+	
 	{
 		imgurl:'images/wuliu/1.png',
 		theme:'wuliu',
@@ -62,7 +77,7 @@ function int(){
 	for(var i=0;i<jsondata.length;i++){
 		var data = jsondata[i]
 		var html='<div class="portfolioFilterableItemWrapper" data-type="'+data.type+'">'+
-          '<a href="singleProject.html?url="'+data.imgurl+'"" class="portfolioFilterableItemImageWrapper" style="padding:8px">'+
+          '<a href="singleProject.html?'+data.theme+'"" class="portfolioFilterableItemImageWrapper" style="padding:8px">'+
           '<img src="'+data.imgurl+'" alt=""/ >'+
           '</a>'+
 
