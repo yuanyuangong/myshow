@@ -1,45 +1,25 @@
 var jsondata=[
-	{	theme:'xiuxian',
-		imgurl:'images/xiuxian/0.png',
-		datatype:'paint',
-		title:"游戏策划《修无尽》",
-		pl:"修仙放置类游戏，自由组合技能独创功法，平行世界设定，单机变联机",
-		leg:9
-	},
-	{	theme:'paint',
-		imgurl:'images/paint/4.png',
-		datatype:'paint',
-		title:"绘画",
-		pl:"插画创造之路",
-		leg:4
-	},
+	
 	{	theme:'youyou',
 		imgurl:'images/youyou/1.png',
 		datatype:'websites',
 		title:"友游戏",
-		pl:"转独立手机游戏发布提供渠道",
+		pl:"独立游戏NFT",
 		leg:9
 	},
 	{	theme:'youweb',
 		imgurl:'images/youweb/1.png',
 		datatype:'websites',
 		title:"友游戏web",
-		pl:"转独立手机游戏发布提供渠道",
+		pl:"独立游戏NFT",
 		leg:7
 	},
 	{	theme:'miyou',
 		imgurl:'images/miyou/1.png',
 		datatype:'logos',
 		title:"觅友戏",
-		pl:"寻找朋友玩新游戏",
+		pl:"一起玩链游赚钱",
 		leg:5
-	},
-	{	theme:'oter',
-		imgurl:'images/oter/6.png',
-		datatype:'photos',
-		title:"各种设计",
-		pl:"showTime",
-		leg:8
 	},
 	
 	{
@@ -71,6 +51,34 @@ var jsondata=[
 		pl:"邮轮票务，以及邮轮物资供应信息管理系统",
 		leg:3
 	},
+	{	theme:'xiuxian',
+		imgurl:'images/xiuxian/0.png',
+		datatype:'paint',
+		title:"游戏策划《修无尽》",
+		pl:"修仙放置类游戏，自由组合技能独创功法，平行世界设定，单机变联机",
+		leg:9
+	},
+	{	theme:'oter',
+		imgurl:'images/oter/6.png',
+		datatype:'photos',
+		title:"各种设计",
+		pl:"showTime",
+		leg:8
+	},
+	{	theme:'paint',
+		imgurl:'images/paint/4.png',
+		datatype:'paint',
+		title:"绘画",
+		pl:"插画创造之路",
+		leg:5
+	},
+	{	theme:'mz',
+		imgurl:'images/mz/00.png',
+		datatype:'mz',
+		title:"美中教育城",
+		pl:"在线教育",
+		leg:12
+	}
 	
 ]
 function int(){
