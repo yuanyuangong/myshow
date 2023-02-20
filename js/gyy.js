@@ -86,7 +86,7 @@ function int(){
 		var data = jsondata[i]
 		var html='<div class="portfolioFilterableItemWrapper" data-type="'+data.type+'">'+
           '<a href="singleProject.html?'+data.theme+'"" class="portfolioFilterableItemImageWrapper" style="padding:8px">'+
-          '<img src="'+data.imgurl+'" alt=""/ >'+
+          '<img decoding="async" loading="lazy" src="'+data.imgurl+'" alt=""/ >'+
           '</a>'+
 
           '<div class="portfolioFilterableItemInfoWrapper">'+
@@ -108,7 +108,7 @@ function ints(){
 	for(var i=0;i<jsondata.length;i++){
 		for(var j=0;j<jsondata[i].leg;j++){
 			var jc='images/'+jsondata[i].theme+'/'+String(j+1)+'.png'
-			var html='<div class="portfolioTwoItemWrapper"><a><img src="'+jc+'" alt="" style="width: 100%"/></a>'+
+			var html='<div class="portfolioTwoItemWrapper"><a><img decoding="async" loading="lazy" src="'+jc+'" alt="" style="width: 100%"/></a>'+
 
           '<div class="portfolioFilterableItemButtonsWrapper"><a href="'+jc+
           '" class="portfolioFilterableExpandButton">放大</a></div></div>'
