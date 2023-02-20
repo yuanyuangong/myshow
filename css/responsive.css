@@ -28,6 +28,33 @@
 	border-bottom: 0px;
 }
 }
+
+
+  
+ 
+  .portfolioOneFilterableWrapper,.singleProjectPageWrapper{
+    
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-column-gap:12px;
+  
+  }
+
+  .portfolioFilterableItemImageWrapper {
+
+    height: 320px;
+    overflow: hidden;
+  }
+   @media only screen and (max-width: 750px){
+     .portfolioOneFilterableWrapper,.singleProjectPageWrapper{
+        display: grid;
+        grid-template-columns: auto ;
+    } 
+    .portfolioFilterableItemWrapper img{
+      height: auto!important
+    }
+  }
+
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////// Responsive Framework CSS Rules End                                                                 */
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
